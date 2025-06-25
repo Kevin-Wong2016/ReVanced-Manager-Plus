@@ -1,7 +1,22 @@
 # RV Manager Plus 3.0 🚀
 
-**Disclaimer:**  
-This project is an independent application inspired by the classic Vanced Manager concept. It is not affiliated with, endorsed by, or connected to any official ReVanced projects or trademark owners. This is a community-driven tool designed for better app management, installation, and updates.
+*__Disclaimer:__ This project is an independent application inspired by the classic Vanced Manager concept. It is not affiliated with, endorsed by, or connected to any official ReVanced projects or trademark owners. This is a community-driven tool designed for better app management, installation, and updates.*
+
+---
+
+<!-- 🌐 Language Translations -->
+<p align="right">
+  <b>Languages:</b>
+  <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icons/7.3.2/flags/4x3/us.svg" width="20" style="vertical-align:middle;"> English |
+  <a href="docs/readme-zh.md"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icons/7.3.2/flags/4x3/cn.svg" width="20" style="vertical-align:middle;"> 中文</a> |
+  <a href="docs/readme-es.md"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icons/7.3.2/flags/4x3/es.svg" width="20" style="vertical-align:middle;"> Español</a> |
+  <a href="docs/readme-fr.md"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icons/7.3.2/flags/4x3/fr.svg" width="20" style="vertical-align:middle;"> Français</a> |
+  <a href="docs/readme-de.md"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icons/7.3.2/flags/4x3/de.svg" width="20" style="vertical-align:middle;"> Deutsch</a> |
+  <a href="docs/readme-pt.md"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icons/7.3.2/flags/4x3/br.svg" width="20" style="vertical-align:middle;"> Português</a> |
+  <a href="docs/readme-ko.md"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icons/7.3.2/flags/4x3/kr.svg" width="20" style="vertical-align:middle;"> 한국어</a> |
+  <a href="docs/readme-vi.md"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icons/7.3.2/flags/4x3/vn.svg" width="20" style="vertical-align:middle;"> Tiếng Việt</a> |
+  <a href="docs/readme-id.md"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icons/7.3.2/flags/4x3/id.svg" width="20" style="vertical-align:middle;"> Indonesia</a>
+</p>
 
 ---
 
@@ -318,6 +333,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🔗 **Links**
 
+- **Homepage**: [https://vanced.to](https://vanced.to)
 - **Repository**: [https://github.com/vancedapps/rv-manager](https://github.com/vancedapps/rv-manager)
 - **Releases**: [Latest Downloads](https://github.com/vancedapps/rv-manager/releases)
 - **Issues**: [Bug Reports & Feature Requests](https://github.com/vancedapps/rv-manager/issues)
