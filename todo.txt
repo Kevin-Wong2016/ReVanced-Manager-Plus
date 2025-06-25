@@ -1,2 +1,0 @@
-Check latest install link instead of version
-Remove and install one more time if install failed

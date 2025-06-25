@@ -29,22 +29,22 @@ fun loadVersionProps(): Properties {
 // Load version properties
 val versionProps = loadVersionProps()
 
-
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.compose.compiler)
-
-    kotlin("plugin.serialization")
+    alias(libs.plugins.hilt)
+    alias(libs.plugins.kotlin.serialization)
+    alias(libs.plugins.kotlin.ksp)
 
 }
 
 android {
-    namespace = "com.rv.net.rvmanager"
+    namespace = "com.revanced.net.revancedmanager"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.rv.net.rvmanager"
+        applicationId = "com.revanced.net.revancedmanager"
         minSdk = 24
         targetSdk = 34
 
@@ -81,17 +81,17 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
     }
     buildFeatures {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.1"
+        kotlinCompilerExtensionVersion = "1.5.8"
     }
     packaging {
         resources {
@@ -106,26 +106,44 @@ tasks.register("incrementVersion") {
     description = "Increments version code and patch version"
 
     doLast {
+        println("[VERSION] Starting version increment process...")
+        
         val versionPropsFile = project.rootProject.file("version.properties")
         val versionProps = loadVersionProps()
+        
+        println("[FILE] Loading version properties from: ${versionPropsFile.absolutePath}")
+
+        // Get current versions
+        val currentVersionCode = versionProps["VERSION_CODE"].toString().toInt()
+        val currentMajor = versionProps["VERSION_NAME_MAJOR"].toString()
+        val currentMinor = versionProps["VERSION_NAME_MINOR"].toString()
+        val currentPatch = versionProps["VERSION_NAME_PATCH"].toString().toInt()
+        
+        println("[INFO] Current version: ${currentMajor}.${currentMinor}.${currentPatch} (Code: ${currentVersionCode})")
 
         // Increment version code
-        val versionCode = versionProps["VERSION_CODE"].toString().toInt() + 1
-        versionProps["VERSION_CODE"] = versionCode.toString()
+        val newVersionCode = currentVersionCode + 1
+        versionProps["VERSION_CODE"] = newVersionCode.toString()
+        println("[UPDATE] Version code: ${currentVersionCode} -> ${newVersionCode}")
 
         // Increment patch version
-        val patch = versionProps["VERSION_NAME_PATCH"].toString().toInt() + 1
-        versionProps["VERSION_NAME_PATCH"] = patch.toString()
+        val newPatch = currentPatch + 1
+        versionProps["VERSION_NAME_PATCH"] = newPatch.toString()
+        println("[UPDATE] Patch version: ${currentPatch} -> ${newPatch}")
 
         // Save updated properties
+        println("[SAVE] Saving updated version properties...")
         versionProps.store(FileOutputStream(versionPropsFile), null)
 
-        println("Version incremented to: ${versionProps["VERSION_NAME_MAJOR"]}.${versionProps["VERSION_NAME_MINOR"]}.${versionProps["VERSION_NAME_PATCH"]} (${versionCode})")
+        val newVersionName = "${currentMajor}.${currentMinor}.${newPatch}"
+        println("[SUCCESS] Version successfully incremented!")
+        println("[RESULT] New version: ${newVersionName} (Code: ${newVersionCode})")
+        println("---------------------------------------------------")
     }
 }
 
 
-tasks.register("rvRelease") {
+tasks.register("revancedRelease") {
     description = "Builds release APK, increments version, and copies to apk directory"
 
     // Make sure this task runs after assembleRelease
@@ -133,22 +151,107 @@ tasks.register("rvRelease") {
 
     finalizedBy("incrementVersion")
     doLast {
+        println("[RELEASE] Starting ReVanced Release Build Process...")
+        println("---------------------------------------------------")
+        
         // Get the version name from android config
         val versionName = android.defaultConfig.versionName
+        println("[INFO] Build version: ${versionName}")
 
         // Define source and destination files
         val sourceFile = layout.buildDirectory.file("outputs/apk/release/app-release.apk")
         val destinationDir = project.rootDir.resolve("apk")
-        val destinationFile = destinationDir.resolve("rv.net_rv_manager_v${versionName}.apk")
+        val destinationFile = destinationDir.resolve("vanced.to_revanced_manager_plus_v${versionName}.apk")
+
+        println("[SOURCE] Source APK: ${sourceFile.get().asFile.absolutePath}")
+        println("[TARGET] Destination directory: ${destinationDir.absolutePath}")
+        println("[FILE] Final APK name: vanced.to_revanced_manager_plus_v${versionName}.apk")
 
         // Create destination directory if it doesn't exist
-        destinationDir.mkdirs()
+        if (!destinationDir.exists()) {
+            println("[CREATE] Creating destination directory...")
+            destinationDir.mkdirs()
+        } else {
+            println("[EXISTS] Destination directory already exists")
+        }
 
+        // Check if source file exists
+        if (!sourceFile.get().asFile.exists()) {
+            println("[ERROR] Source APK file not found: ${sourceFile.get().asFile.absolutePath}")
+            throw Exception("Source APK file not found")
+        }
+
+        println("[COPY] Copying and renaming APK file...")
         // Copy and rename the file
         sourceFile.get().asFile.copyTo(destinationFile, overwrite = true)
 
-        // Log success message
-        println("APK copied to: ${destinationFile.absolutePath}")
+        // Get file size information
+        val fileSizeBytes = destinationFile.length()
+        val fileSizeMB = fileSizeBytes / (1024.0 * 1024.0)
+
+        println("[SUCCESS] RELEASE BUILD COMPLETED SUCCESSFULLY!")
+        println("---------------------------------------------------")
+        println("[LOCATION] APK Location: ${destinationFile.absolutePath}")
+        println("[SIZE] File Size: ${String.format("%.2f", fileSizeMB)} MB (${fileSizeBytes} bytes)")
+        println("[VERSION] Version: ${versionName}")
+        println("[READY] The release APK is ready for distribution!")
+        println("---------------------------------------------------")
+    }
+}
+
+tasks.register("revancedDebug") {
+    description = "Builds debug APK, increments version, and copies to apk directory"
+
+    // Make sure this task runs after assembleDebug
+    dependsOn("assembleDebug")
+
+    finalizedBy("incrementVersion")
+    doLast {
+        println("[DEBUG] Starting ReVanced Debug Build Process...")
+        println("---------------------------------------------------")
+        
+        // Get the version name from android config
+        val versionName = android.defaultConfig.versionName
+        println("[INFO] Build version: ${versionName}")
+
+        // Define source and destination files
+        val sourceFile = layout.buildDirectory.file("outputs/apk/debug/app-debug.apk")
+        val destinationDir = project.rootDir.resolve("apk")
+        val destinationFile = destinationDir.resolve("vanced.to_revanced_manager_plus_debug_v${versionName}.apk")
+
+        println("[SOURCE] Source APK: ${sourceFile.get().asFile.absolutePath}")
+        println("[TARGET] Destination directory: ${destinationDir.absolutePath}")
+        println("[FILE] Final APK name: vanced.to_revanced_manager_plus_debug_v${versionName}.apk")
+
+        // Create destination directory if it doesn't exist
+        if (!destinationDir.exists()) {
+            println("[CREATE] Creating destination directory...")
+            destinationDir.mkdirs()
+        } else {
+            println("[EXISTS] Destination directory already exists")
+        }
+
+        // Check if source file exists
+        if (!sourceFile.get().asFile.exists()) {
+            println("[ERROR] Source APK file not found: ${sourceFile.get().asFile.absolutePath}")
+            throw Exception("Source APK file not found")
+        }
+
+        println("[COPY] Copying and renaming debug APK file...")
+        // Copy and rename the file
+        sourceFile.get().asFile.copyTo(destinationFile, overwrite = true)
+
+        // Get file size information
+        val fileSizeBytes = destinationFile.length()
+        val fileSizeMB = fileSizeBytes / (1024.0 * 1024.0)
+
+        println("[SUCCESS] DEBUG BUILD COMPLETED SUCCESSFULLY!")
+        println("---------------------------------------------------")
+        println("[LOCATION] Debug APK Location: ${destinationFile.absolutePath}")
+        println("[SIZE] File Size: ${String.format("%.2f", fileSizeMB)} MB (${fileSizeBytes} bytes)")
+        println("[VERSION] Version: ${versionName}")
+        println("[READY] The debug APK is ready for testing!")
+        println("---------------------------------------------------")
     }
 }
 
@@ -157,8 +260,18 @@ tasks.register("generateKeystore") {
     description = "Generates a new keystore file with predefined credentials"
 
     doLast {
+        println("[KEYSTORE] Starting Keystore Generation Process...")
+        println("---------------------------------------------------")
+        
         // Load keystore properties
         val keystorePropertiesFile = rootProject.file("keystore.properties")
+        println("[FILE] Loading keystore properties from: ${keystorePropertiesFile.absolutePath}")
+        
+        if (!keystorePropertiesFile.exists()) {
+            println("[ERROR] Keystore properties file not found: ${keystorePropertiesFile.absolutePath}")
+            throw Exception("Keystore properties file not found")
+        }
+        
         val keystoreProperties = Properties().apply {
             load(FileInputStream(keystorePropertiesFile))
         }
@@ -169,9 +282,22 @@ tasks.register("generateKeystore") {
         val keyAlias = keystoreProperties["keyAlias"] as String
         val storeFile = keystoreProperties["storeFile"] as String
 
+        println("[CONFIG] Keystore Configuration:")
+        println("   [ALIAS] Key Alias: $keyAlias")
+        println("   [FILE] Store File: $storeFile")
+        println("   [PASS] Store Password: ${"*".repeat(storePassword.length)}")
+        println("   [PASS] Key Password: ${"*".repeat(keyPassword.length)}")
+
         // Create keystore file in app folder
         val appFolder = project.projectDir
         val keystoreFile = File(appFolder, storeFile)
+        
+        println("[TARGET] Target keystore location: ${keystoreFile.absolutePath}")
+
+        // Check if keystore already exists
+        if (keystoreFile.exists()) {
+            println("[WARNING] Keystore file already exists. It will be overwritten.")
+        }
 
         // Prepare the keytool command
         val keyToolCommand = arrayOf(
@@ -185,8 +311,14 @@ tasks.register("generateKeystore") {
             "-validity", "10000",
             "-storepass", storePassword,
             "-keypass", keyPassword,
-            "-dname", "CN=RV,OU=RV,O=RV,L=Unknown,ST=Unknown,C=US"
+            "-dname", "CN=ReVanced,OU=ReVanced,O=ReVanced,L=Unknown,ST=Unknown,C=US"
         )
+
+        println("[EXECUTE] Executing keytool command...")
+        println("   [ALG] Algorithm: RSA")
+        println("   [SIZE] Key Size: 2048 bits")
+        println("   [VALID] Validity: 10000 days")
+        println("   [DN] Distinguished Name: CN=ReVanced,OU=ReVanced,O=ReVanced,L=Unknown,ST=Unknown,C=US")
 
         try {
             // Execute keytool command
@@ -194,65 +326,120 @@ tasks.register("generateKeystore") {
                 .redirectErrorStream(true)
                 .start()
 
+            println("[PROCESS] Running keytool process...")
+            
             // Print the output
             process.inputStream.bufferedReader().useLines { lines ->
-                lines.forEach { println(it) }
+                lines.forEach { line -> 
+                    if (line.isNotBlank()) {
+                        println("   [OUTPUT] $line")
+                    }
+                }
             }
 
             // Wait for the process to complete
             val exitCode = process.waitFor()
+            println("[COMPLETE] Keytool process completed with exit code: $exitCode")
 
             if (exitCode == 0) {
-                println("""
-                    ✅ Keystore generated successfully!
-                    📁 Location: ${project.rootDir}/${storeFile}
-                    🔑 Key Alias: $keyAlias
-                    ⚡ Remember to keep your keystore file safe and secure!
-                """.trimIndent())
+                val keystoreSize = if (keystoreFile.exists()) {
+                    val sizeBytes = keystoreFile.length()
+                    "${sizeBytes} bytes"
+                } else "Unknown"
+                
+                println("[SUCCESS] KEYSTORE GENERATED SUCCESSFULLY!")
+                println("---------------------------------------------------")
+                println("[LOCATION] Keystore Location: ${keystoreFile.absolutePath}")
+                println("[SIZE] File Size: $keystoreSize")
+                println("[ALIAS] Key Alias: $keyAlias")
+                println("[VALIDITY] Validity: 10000 days (~27 years)")
+                println("[ALGORITHM] Algorithm: RSA 2048-bit")
+                println("[IMPORTANT] Keep your keystore file safe and secure!")
+                println("[BACKUP] Make sure to backup this keystore file!")
+                println("---------------------------------------------------")
             } else {
-                println("❌ Failed to generate keystore. Exit code: $exitCode")
+                println("[FAILED] KEYSTORE GENERATION FAILED!")
+                println("---------------------------------------------------")
+                println("Exit code: $exitCode")
+                println("Please check the error messages above for more details.")
+                throw Exception("Failed to generate keystore. Exit code: $exitCode")
             }
         } catch (e: Exception) {
-            println("❌ Error generating keystore: ${e.message}")
+            println("[ERROR] ERROR DURING KEYSTORE GENERATION!")
+            println("---------------------------------------------------")
+            println("Error message: ${e.message}")
+            println("Please ensure:")
+            println("  1. Java keytool is installed and in PATH")
+            println("  2. keystore.properties file exists and is properly configured")
+            println("  3. You have write permissions to the target directory")
             throw e
         }
     }
 }
 
 dependencies {
-
+    // Core Android dependencies
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
+    implementation(libs.androidx.core.splashscreen)
+    implementation(libs.androidx.appcompat)
+
+    // Compose BOM and related dependencies
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.ui)
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    implementation(libs.androidx.compose.material.icons.extended)
+
+    // Navigation
+    implementation(libs.androidx.navigation.compose)
+
+    // Hilt Dependency Injection
+    implementation(libs.hilt.android)
+    implementation(libs.hilt.navigation.compose)
+    implementation(libs.hilt.work)
+    ksp(libs.hilt.compiler)
+
+    // Lifecycle & ViewModel
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
+    implementation(libs.androidx.lifecycle.runtime.compose)
+    implementation(libs.androidx.lifecycle.process)
+
+    // Coroutines
+    implementation(libs.kotlinx.coroutines.core)
+    implementation(libs.kotlinx.coroutines.android)
+
+    // Serialization
+    implementation(libs.kotlinx.serialization.json)
+
+    // Network
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.kotlinx.serialization)
+    implementation(libs.okhttp)
+    implementation(libs.okhttp.logging)
+    implementation("com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:1.0.0")
+
+    // Image loading
+    implementation(libs.coil.compose)
+
+    // Work Manager
     implementation(libs.androidx.work.runtime.ktx)
+
+    // Room Database
+    implementation(libs.androidx.room.runtime)
+    implementation(libs.androidx.room.ktx)
+    ksp(libs.androidx.room.compiler)
+
+    // Testing
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.ui.test.junit4)
+    
+    // Debug
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
-
-
-    // Add Coil for image loading
-    implementation("io.coil-kt:coil-compose:2.7.0")
-    // Add Material icons
-    implementation("androidx.compose.material:material-icons-extended")
-
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.0")
-
-    implementation("org.greenrobot:eventbus:3.3.1")
-
-    implementation("com.squareup.okhttp3:okhttp:4.12.0")
-
-    implementation("androidx.work:work-runtime-ktx:2.9.1")
-
-
-    implementation("androidx.core:core-splashscreen:1.0.1")
-
 }

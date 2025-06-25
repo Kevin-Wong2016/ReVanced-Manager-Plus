@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "RV Manager"
+rootProject.name = "ReVanced Manager Plus"
 include(":app")
