@@ -1,0 +1,72 @@
+<resources>
+    <string name="app_name">ReVanced Manager Plus</string>
+    
+    <!-- Settings Dialog -->
+    <string name="settings">设置</string>
+    <string name="theme">主题</string>
+    <string name="language">语言</string>
+    <string name="theme_light">浅色</string>
+    <string name="theme_dark">深色</string>
+    <string name="theme_system">跟随系统</string>
+    <string name="apply">应用</string>
+    <string name="cancel">取消</string>
+    <string name="restart_app">重启应用</string>
+    <string name="restart_later">稍后</string>
+    <string name="select_language">选择语言</string>
+    <string name="tap_to_change">点击更改</string>
+    
+    <!-- Main Screen -->
+    <string name="confirm">确认</string>
+    <string name="retry">重试</string>
+    <string name="loading_apps_message">正在加载应用...</string>
+    <string name="error_prefix">错误：%1$s</string>
+    <string name="revanced_manager_by">ReVanced Manager by vanced.to</string>
+    
+    <!-- App Card Actions -->
+    <string name="download">下载</string>
+    <string name="update">更新</string>
+    <string name="open">打开</string>
+    <string name="uninstall">卸载</string>
+    <string name="downloading">正在下载</string>
+    <string name="installing">正在安装</string>
+    <string name="uninstalling">正在卸载</string>
+    <string name="unknown">未知</string>
+    <string name="installed_version">已安装: v%1$s</string>
+    <string name="latest_version">最新版: v%1$s</string>
+    <string name="downloading_progress">正在下载 %1$d%%</string>
+    
+    <!-- Toast Messages -->
+    <string name="download_starting">开始下载...</string>
+    <string name="download_completed_installing">下载完成，正在开始安装...</string>
+    <string name="download_failed">下载失败：%1$s</string>
+    <string name="download_failed_memory">下载失败，内存不足。请关闭其他应用并重试。</string>
+    <string name="download_failed_storage">下载失败，存储空间不足。请释放空间并重试。</string>
+    <string name="insufficient_storage_error">存储空间不足。可用：%1$d MB。请释放空间并重试。</string>
+    <string name="download_cancelled">下载已取消</string>
+    <string name="installation_started">安装已开始</string>
+    <string name="installation_completed">安装成功完成</string>
+    <string name="installation_failed_start">启动安装失败</string>
+    <string name="installation_failed_apk_not_found">安装失败，未找到APK文件</string>
+    <string name="installation_pending_user_action">等待用户确认安装</string>
+    <string name="uninstallation_started">卸载已开始</string>
+    <string name="uninstallation_completed">卸载成功完成</string>
+    <string name="uninstallation_failed">卸载失败：%1$s</string>
+    <string name="failed_start_uninstallation">启动卸载失败</string>
+    <string name="failed_open_app">打开应用失败</string>
+    <string name="failed_open_app_error">打开应用失败：%1$s</string>
+    <string name="old_version_uninstalled">旧版本已卸载，正在重试安装...</string>
+    <string name="failed_uninstall_old_version">卸载旧版本失败</string>
+    <string name="failed_uninstall_old_version_error">卸载旧版本失败：%1$s</string>
+    <string name="app_status_updated">应用状态已更新</string>
+    <string name="configuration_saved">配置已保存</string>
+    
+    <!-- Dialog Titles -->
+    <string name="installation_failed_title">安装失败</string>
+    <string name="uninstall_required_title">需要卸载</string>
+    <string name="language_changed_title">语言已更改</string>
+    
+    <!-- Dialog Messages -->
+    <string name="installation_failed_retry_message">安装失败：%1$s\n\n您想要重试吗？如果存在旧版本，这将首先卸载旧版本。</string>
+    <string name="uninstall_required_message">要重试安装%1$s，需要先卸载旧版本。继续？</string>
+    <string name="language_changed_message">语言已更改为%1$s。\n\n现在重启应用以应用更改？</string>
+</resources> 

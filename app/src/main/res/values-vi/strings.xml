@@ -1,0 +1,72 @@
+<resources>
+    <string name="app_name">ReVanced Manager Plus</string>
+    
+    <!-- Settings Dialog -->
+    <string name="settings">Cài đặt</string>
+    <string name="theme">Giao diện</string>
+    <string name="language">Ngôn ngữ</string>
+    <string name="theme_light">Sáng</string>
+    <string name="theme_dark">Tối</string>
+    <string name="theme_system">Theo hệ thống</string>
+    <string name="apply">Áp dụng</string>
+    <string name="cancel">Hủy</string>
+    <string name="restart_app">Khởi động lại</string>
+    <string name="restart_later">Để sau</string>
+    <string name="select_language">Chọn ngôn ngữ</string>
+    <string name="tap_to_change">Chạm để thay đổi</string>
+    
+    <!-- Main Screen -->
+    <string name="confirm">Xác nhận</string>
+    <string name="retry">Thử lại</string>
+    <string name="loading_apps_message">Đang tải ứng dụng...</string>
+    <string name="error_prefix">Lỗi: %1$s</string>
+    <string name="revanced_manager_by">ReVanced Manager bởi vanced.to</string>
+    
+    <!-- App Card Actions -->
+    <string name="download">Tải về</string>
+    <string name="update">Cập nhật</string>
+    <string name="open">Mở</string>
+    <string name="uninstall">Gỡ cài đặt</string>
+    <string name="downloading">Đang tải</string>
+    <string name="installing">Đang cài đặt</string>
+    <string name="uninstalling">Đang gỡ cài đặt</string>
+    <string name="unknown">Không xác định</string>
+    <string name="installed_version">Đã cài: v%1$s</string>
+    <string name="latest_version">Mới nhất: v%1$s</string>
+    <string name="downloading_progress">Đang tải %1$d%%</string>
+    
+    <!-- Toast Messages -->
+    <string name="download_starting">Đang bắt đầu tải xuống...</string>
+    <string name="download_completed_installing">Đã tải xong, bắt đầu cài đặt...</string>
+    <string name="download_failed">Tải về thất bại: %1$s</string>
+    <string name="download_failed_memory">Tải về thất bại do không đủ bộ nhớ. Vui lòng đóng các ứng dụng khác và thử lại.</string>
+    <string name="download_failed_storage">Tải về thất bại do không đủ dung lượng lưu trữ. Vui lòng giải phóng dung lượng và thử lại.</string>
+    <string name="insufficient_storage_error">Không đủ dung lượng lưu trữ. Còn lại: %1$d MB. Vui lòng giải phóng dung lượng và thử lại.</string>
+    <string name="download_cancelled">Đã hủy tải xuống</string>
+    <string name="installation_started">Bắt đầu cài đặt</string>
+    <string name="installation_completed">Cài đặt hoàn thành thành công</string>
+    <string name="installation_failed_start">Không thể bắt đầu cài đặt</string>
+    <string name="installation_failed_apk_not_found">Cài đặt thất bại và không tìm thấy tệp APK</string>
+    <string name="installation_pending_user_action">Đang chờ người dùng xác nhận cài đặt</string>
+    <string name="uninstallation_started">Bắt đầu gỡ cài đặt</string>
+    <string name="uninstallation_completed">Gỡ cài đặt hoàn tất thành công</string>
+    <string name="uninstallation_failed">Gỡ cài đặt thất bại: %1$s</string>
+    <string name="failed_start_uninstallation">Không thể bắt đầu gỡ cài đặt</string>
+    <string name="failed_open_app">Không thể mở ứng dụng</string>
+    <string name="failed_open_app_error">Không thể mở ứng dụng: %1$s</string>
+    <string name="old_version_uninstalled">Đã gỡ phiên bản cũ, thử lại cài đặt...</string>
+    <string name="failed_uninstall_old_version">Không thể gỡ phiên bản cũ</string>
+    <string name="failed_uninstall_old_version_error">Không thể gỡ phiên bản cũ: %1$s</string>
+    <string name="app_status_updated">Đã cập nhật trạng thái ứng dụng</string>
+    <string name="configuration_saved">Cấu hình đã được lưu</string>
+    
+    <!-- Dialog Titles -->
+    <string name="installation_failed_title">Cài đặt thất bại</string>
+    <string name="uninstall_required_title">Yêu cầu gỡ cài đặt</string>
+    <string name="language_changed_title">Đã thay đổi ngôn ngữ</string>
+    
+    <!-- Dialog Messages -->
+    <string name="installation_failed_retry_message">Cài đặt thất bại: %1$s\n\nBạn có muốn thử lại không? Điều này sẽ gỡ phiên bản cũ trước nếu tồn tại.</string>
+    <string name="uninstall_required_message">Để thử lại cài đặt %1$s, phiên bản cũ cần được gỡ trước. Tiếp tục?</string>
+    <string name="language_changed_message">Ngôn ngữ đã được thay đổi thành %1$s.\n\nKhởi động lại ứng dụng ngay bây giờ để áp dụng thay đổi?</string>
+</resources> 

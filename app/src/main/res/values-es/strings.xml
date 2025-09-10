@@ -1,0 +1,70 @@
+<resources>
+    <string name="app_name">ReVanced Manager Plus</string>
+    
+    <!-- Settings Dialog -->
+    <string name="settings">Configuración</string>
+    <string name="theme">Tema</string>
+    <string name="language">Idioma</string>
+    <string name="theme_light">Claro</string>
+    <string name="theme_dark">Oscuro</string>
+    <string name="theme_system">Sistema</string>
+    <string name="apply">Aplicar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="restart_app">Reiniciar App</string>
+    <string name="restart_later">Más tarde</string>
+    
+    <!-- Main Screen -->
+    <string name="confirm">Confirmar</string>
+    <string name="retry">Reintentar</string>
+    <string name="loading_apps_message">Cargando apps...</string>
+    <string name="error_prefix">Error: %1$s</string>
+    <string name="revanced_manager_by">ReVanced Manager by vanced.to</string>
+    
+    <!-- App Card Actions -->
+    <string name="download">Descargar</string>
+    <string name="update">Actualizar</string>
+    <string name="open">Abrir</string>
+    <string name="uninstall">Desinstalar</string>
+    <string name="downloading">Descargando</string>
+    <string name="installing">Instalando</string>
+    <string name="uninstalling">Desinstalando</string>
+    <string name="unknown">Desconocido</string>
+    <string name="installed_version">Instalada: v%1$s</string>
+    <string name="latest_version">Última: v%1$s</string>
+    <string name="downloading_progress">Descargando %1$d%%</string>
+    
+    <!-- Toast Messages -->
+    <string name="download_starting">Iniciando descarga...</string>
+    <string name="download_completed_installing">Descarga completada, iniciando instalación...</string>
+    <string name="download_failed">Descarga falló: %1$s</string>
+    <string name="download_failed_memory">Descarga falló por memoria insuficiente. Cierre otras apps e intente de nuevo.</string>
+    <string name="download_failed_storage">Descarga falló por espacio insuficiente. Libere espacio e intente de nuevo.</string>
+    <string name="insufficient_storage_error">Espacio insuficiente. Disponible: %1$d MB. Libere espacio e intente de nuevo.</string>
+    <string name="download_cancelled">Descarga cancelada</string>
+    <string name="installation_started">Instalación iniciada</string>
+    <string name="installation_completed">Instalación completada exitosamente</string>
+    <string name="installation_failed_start">No se pudo iniciar instalación</string>
+    <string name="installation_failed_apk_not_found">Instalación falló y archivo APK no encontrado</string>
+    <string name="installation_pending_user_action">Esperando confirmación del usuario para instalar</string>
+    <string name="uninstallation_started">Desinstalación iniciada</string>
+    <string name="uninstallation_completed">Desinstalación completada exitosamente</string>
+    <string name="uninstallation_failed">Desinstalación falló: %1$s</string>
+    <string name="failed_start_uninstallation">No se pudo iniciar desinstalación</string>
+    <string name="failed_open_app">No se pudo abrir la app</string>
+    <string name="failed_open_app_error">No se pudo abrir la app: %1$s</string>
+    <string name="old_version_uninstalled">Versión anterior desinstalada, reintentando instalación...</string>
+    <string name="failed_uninstall_old_version">No se pudo desinstalar versión anterior</string>
+    <string name="failed_uninstall_old_version_error">No se pudo desinstalar versión anterior: %1$s</string>
+    <string name="app_status_updated">Estado de app actualizado</string>
+    <string name="configuration_saved">Configuración guardada</string>
+    
+    <!-- Dialog Titles -->
+    <string name="installation_failed_title">Instalación Falló</string>
+    <string name="uninstall_required_title">Desinstalación Requerida</string>
+    <string name="language_changed_title">Idioma Cambiado</string>
+    
+    <!-- Dialog Messages -->
+    <string name="installation_failed_retry_message">Instalación falló: %1$s\n\n¿Desea reintentar? Esto desinstalará la versión anterior primero si existe.</string>
+    <string name="uninstall_required_message">Para reintentar la instalación de %1$s, la versión anterior debe desinstalarse primero. ¿Continuar?</string>
+    <string name="language_changed_message">El idioma ha cambiado a %1$s.\n\n¿Reiniciar la app ahora para aplicar los cambios?</string>
+</resources> 

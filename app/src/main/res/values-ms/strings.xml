@@ -1,0 +1,70 @@
+<resources>
+    <string name="app_name">ReVanced Manager Plus</string>
+    
+    <!-- Settings Dialog -->
+    <string name="settings">Tetapan</string>
+    <string name="theme">Tema</string>
+    <string name="language">Bahasa</string>
+    <string name="theme_light">Terang</string>
+    <string name="theme_dark">Gelap</string>
+    <string name="theme_system">Sistem</string>
+    <string name="apply">Guna</string>
+    <string name="cancel">Batal</string>
+    <string name="restart_app">Mula Semula App</string>
+    <string name="restart_later">Kemudian</string>
+    
+    <!-- Main Screen -->
+    <string name="confirm">Sahkan</string>
+    <string name="retry">Cuba Lagi</string>
+    <string name="loading_apps_message">Memuatkan app...</string>
+    <string name="error_prefix">Ralat: %1$s</string>
+    <string name="revanced_manager_by">ReVanced Manager by vanced.to</string>
+    
+    <!-- App Card Actions -->
+    <string name="download">Muat Turun</string>
+    <string name="update">Kemas Kini</string>
+    <string name="open">Buka</string>
+    <string name="uninstall">Nyah Pasang</string>
+    <string name="downloading">Memuat turun</string>
+    <string name="installing">Memasang</string>
+    <string name="uninstalling">Menyah pasang</string>
+    <string name="unknown">Tidak diketahui</string>
+    <string name="installed_version">Dipasang: v%1$s</string>
+    <string name="latest_version">Terkini: v%1$s</string>
+    <string name="downloading_progress">Memuat turun %1$d%%</string>
+    
+    <!-- Toast Messages -->
+    <string name="download_starting">Memulakan muat turun...</string>
+    <string name="download_completed_installing">Muat turun selesai, memulakan pemasangan...</string>
+    <string name="download_failed">Muat turun gagal: %1$s</string>
+    <string name="download_failed_memory">Muat turun gagal kerana memori tidak mencukupi. Sila tutup app lain dan cuba lagi.</string>
+    <string name="download_failed_storage">Muat turun gagal kerana ruang simpanan tidak mencukupi. Sila kosongkan ruang dan cuba lagi.</string>
+    <string name="insufficient_storage_error">Ruang simpanan tidak mencukupi. Tersedia: %1$d MB. Sila kosongkan ruang dan cuba lagi.</string>
+    <string name="download_cancelled">Muat turun dibatalkan</string>
+    <string name="installation_started">Pemasangan dimulakan</string>
+    <string name="installation_completed">Pemasangan berjaya selesai</string>
+    <string name="installation_failed_start">Gagal memulakan pemasangan</string>
+    <string name="installation_failed_apk_not_found">Pemasangan gagal dan fail APK tidak dijumpai</string>
+    <string name="installation_pending_user_action">Menunggu pengesahan pengguna untuk memasang</string>
+    <string name="uninstallation_started">Penyahpasangan dimulakan</string>
+    <string name="uninstallation_completed">Penyahpasangan berjaya selesai</string>
+    <string name="uninstallation_failed">Penyahpasangan gagal: %1$s</string>
+    <string name="failed_start_uninstallation">Gagal memulakan penyahpasangan</string>
+    <string name="failed_open_app">Gagal membuka app</string>
+    <string name="failed_open_app_error">Gagal membuka app: %1$s</string>
+    <string name="old_version_uninstalled">Versi lama dinyah pasang, mencuba pemasangan semula...</string>
+    <string name="failed_uninstall_old_version">Gagal menyah pasang versi lama</string>
+    <string name="failed_uninstall_old_version_error">Gagal menyah pasang versi lama: %1$s</string>
+    <string name="app_status_updated">Status app dikemas kini</string>
+    <string name="configuration_saved">Konfigurasi disimpan</string>
+    
+    <!-- Dialog Titles -->
+    <string name="installation_failed_title">Pemasangan Gagal</string>
+    <string name="uninstall_required_title">Penyahpasangan Diperlukan</string>
+    <string name="language_changed_title">Bahasa Diubah</string>
+    
+    <!-- Dialog Messages -->
+    <string name="installation_failed_retry_message">Pemasangan gagal: %1$s\n\nAdakah anda ingin cuba lagi? Ini akan menyah pasang versi lama dahulu jika wujud.</string>
+    <string name="uninstall_required_message">Untuk mencuba pemasangan %1$s semula, versi lama perlu dinyah pasang dahulu. Teruskan?</string>
+    <string name="language_changed_message">Bahasa telah diubah kepada %1$s.\n\nMula semula app sekarang untuk melaksanakan perubahan?</string>
+</resources> 

@@ -1,0 +1,70 @@
+<resources>
+    <string name="app_name">ReVanced Manager Plus</string>
+    
+    <!-- Settings Dialog -->
+    <string name="settings">Setări</string>
+    <string name="theme">Temă</string>
+    <string name="language">Limbă</string>
+    <string name="theme_light">Deschis</string>
+    <string name="theme_dark">Întunecat</string>
+    <string name="theme_system">Sistem</string>
+    <string name="apply">Aplică</string>
+    <string name="cancel">Anulează</string>
+    <string name="restart_app">Repornește App</string>
+    <string name="restart_later">Mai târziu</string>
+    
+    <!-- Main Screen -->
+    <string name="confirm">Confirmă</string>
+    <string name="retry">Încearcă din nou</string>
+    <string name="loading_apps_message">Se încarcă aplicațiile...</string>
+    <string name="error_prefix">Eroare: %1$s</string>
+    <string name="revanced_manager_by">ReVanced Manager by vanced.to</string>
+    
+    <!-- App Card Actions -->
+    <string name="download">Descarcă</string>
+    <string name="update">Actualizează</string>
+    <string name="open">Deschide</string>
+    <string name="uninstall">Dezinstalează</string>
+    <string name="downloading">Se descarcă</string>
+    <string name="installing">Se instalează</string>
+    <string name="uninstalling">Se dezinstalează</string>
+    <string name="unknown">Necunoscut</string>
+    <string name="installed_version">Instalată: v%1$s</string>
+    <string name="latest_version">Cea mai recentă: v%1$s</string>
+    <string name="downloading_progress">Se descarcă %1$d%%</string>
+    
+    <!-- Toast Messages -->
+    <string name="download_starting">Se începe descărcarea...</string>
+    <string name="download_completed_installing">Descărcare completă, se începe instalarea...</string>
+    <string name="download_failed">Descărcare eșuată: %1$s</string>
+    <string name="download_failed_memory">Descărcare eșuată din cauza memoriei insuficiente. Închideți alte aplicații și încercați din nou.</string>
+    <string name="download_failed_storage">Descărcare eșuată din cauza spațiului insuficient. Eliberați spațiu și încercați din nou.</string>
+    <string name="insufficient_storage_error">Spațiu insuficient. Disponibil: %1$d MB. Eliberați spațiu și încercați din nou.</string>
+    <string name="download_cancelled">Descărcare anulată</string>
+    <string name="installation_started">Instalare începută</string>
+    <string name="installation_completed">Instalare completată cu succes</string>
+    <string name="installation_failed_start">Nu s-a putut începe instalarea</string>
+    <string name="installation_failed_apk_not_found">Instalare eșuată și fișierul APK nu a fost găsit</string>
+    <string name="installation_pending_user_action">Se așteaptă confirmarea utilizatorului pentru instalare</string>
+    <string name="uninstallation_started">Dezinstalare începută</string>
+    <string name="uninstallation_completed">Dezinstalare completată cu succes</string>
+    <string name="uninstallation_failed">Dezinstalare eșuată: %1$s</string>
+    <string name="failed_start_uninstallation">Nu s-a putut începe dezinstalarea</string>
+    <string name="failed_open_app">Nu s-a putut deschide aplicația</string>
+    <string name="failed_open_app_error">Nu s-a putut deschide aplicația: %1$s</string>
+    <string name="old_version_uninstalled">Versiunea veche dezinstalată, se reîncearcă instalarea...</string>
+    <string name="failed_uninstall_old_version">Nu s-a putut dezinstala versiunea veche</string>
+    <string name="failed_uninstall_old_version_error">Nu s-a putut dezinstala versiunea veche: %1$s</string>
+    <string name="app_status_updated">Status aplicație actualizat</string>
+    <string name="configuration_saved">Configurație salvată</string>
+    
+    <!-- Dialog Titles -->
+    <string name="installation_failed_title">Instalare eșuată</string>
+    <string name="uninstall_required_title">Dezinstalare necesară</string>
+    <string name="language_changed_title">Limbă schimbată</string>
+    
+    <!-- Dialog Messages -->
+    <string name="installation_failed_retry_message">Instalare eșuată: %1$s\n\nVreți să încercați din nou? Aceasta va dezinstala mai întâi versiunea veche dacă există.</string>
+    <string name="uninstall_required_message">Pentru a reîncerca instalarea %1$s, versiunea veche trebuie dezinstalată mai întâi. Continuați?</string>
+    <string name="language_changed_message">Limba a fost schimbată în %1$s.\n\nReporniți aplicația acum pentru a aplica modificările?</string>
+</resources> 

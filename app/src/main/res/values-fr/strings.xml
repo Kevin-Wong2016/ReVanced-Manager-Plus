@@ -1,0 +1,70 @@
+<resources>
+    <string name="app_name">ReVanced Manager Plus</string>
+    
+    <!-- Settings Dialog -->
+    <string name="settings">Paramètres</string>
+    <string name="theme">Thème</string>
+    <string name="language">Langue</string>
+    <string name="theme_light">Clair</string>
+    <string name="theme_dark">Sombre</string>
+    <string name="theme_system">Système</string>
+    <string name="apply">Appliquer</string>
+    <string name="cancel">Annuler</string>
+    <string name="restart_app">Redémarrer l\'app</string>
+    <string name="restart_later">Plus tard</string>
+    
+    <!-- Main Screen -->
+    <string name="confirm">Confirmer</string>
+    <string name="retry">Réessayer</string>
+    <string name="loading_apps_message">Chargement des applications...</string>
+    <string name="error_prefix">Erreur : %1$s</string>
+    <string name="revanced_manager_by">ReVanced Manager par vanced.to</string>
+    
+    <!-- App Card Actions -->
+    <string name="download">Télécharger</string>
+    <string name="update">Mettre à jour</string>
+    <string name="open">Ouvrir</string>
+    <string name="uninstall">Désinstaller</string>
+    <string name="downloading">Téléchargement</string>
+    <string name="installing">Installation</string>
+    <string name="uninstalling">Désinstallation</string>
+    <string name="unknown">Inconnu</string>
+    <string name="installed_version">Installé : v%1$s</string>
+    <string name="latest_version">Dernière : v%1$s</string>
+    <string name="downloading_progress">Téléchargement %1$d%%</string>
+    
+    <!-- Toast Messages -->
+    <string name="download_starting">Démarrage du téléchargement...</string>
+    <string name="download_completed_installing">Téléchargement terminé, démarrage de l\'installation...</string>
+    <string name="download_failed">Échec du téléchargement : %1$s</string>
+    <string name="download_failed_memory">Échec du téléchargement en raison d\'une mémoire insuffisante. Fermez d\'autres applications et réessayez.</string>
+    <string name="download_failed_storage">Échec du téléchargement en raison d\'un espace de stockage insuffisant. Libérez de l\'espace et réessayez.</string>
+    <string name="insufficient_storage_error">Espace de stockage insuffisant. Disponible : %1$d MB. Libérez de l\'espace et réessayez.</string>
+    <string name="download_cancelled">Téléchargement annulé</string>
+    <string name="installation_started">Installation démarrée</string>
+    <string name="installation_completed">Installation terminée avec succès</string>
+    <string name="installation_failed_start">Échec du démarrage de l\'installation</string>
+    <string name="installation_failed_apk_not_found">Installation échouée et fichier APK introuvable</string>
+    <string name="installation_pending_user_action">En attente de confirmation utilisateur pour installer</string>
+    <string name="uninstallation_started">Désinstallation démarrée</string>
+    <string name="uninstallation_completed">Désinstallation terminée avec succès</string>
+    <string name="uninstallation_failed">Échec de la désinstallation : %1$s</string>
+    <string name="failed_start_uninstallation">Échec du démarrage de la désinstallation</string>
+    <string name="failed_open_app">Échec de l\'ouverture de l\'application</string>
+    <string name="failed_open_app_error">Échec de l\'ouverture de l\'application : %1$s</string>
+    <string name="old_version_uninstalled">Ancienne version désinstallée, nouvelle tentative d\'installation...</string>
+    <string name="failed_uninstall_old_version">Échec de la désinstallation de l\'ancienne version</string>
+    <string name="failed_uninstall_old_version_error">Échec de la désinstallation de l\'ancienne version : %1$s</string>
+    <string name="app_status_updated">Statut de l\'application mis à jour</string>
+    <string name="configuration_saved">Configuration sauvegardée</string>
+    
+    <!-- Dialog Titles -->
+    <string name="installation_failed_title">Installation échouée</string>
+    <string name="uninstall_required_title">Désinstallation requise</string>
+    <string name="language_changed_title">Langue modifiée</string>
+    
+    <!-- Dialog Messages -->
+    <string name="installation_failed_retry_message">Installation échouée : %1$s\n\nVoulez-vous réessayer ? Cela désinstallera d\'abord l\'ancienne version si elle existe.</string>
+    <string name="uninstall_required_message">Pour réessayer l\'installation de %1$s, l\'ancienne version doit d\'abord être désinstallée. Continuer ?</string>
+    <string name="language_changed_message">La langue a été changée pour %1$s.\n\nRedémarrer l\'application maintenant pour appliquer les modifications ?</string>
+</resources> 

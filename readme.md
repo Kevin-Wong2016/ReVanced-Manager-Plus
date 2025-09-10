@@ -15,7 +15,8 @@
   <a href="docs/readme-pt.md"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icons/7.3.2/flags/4x3/br.svg" width="20" style="vertical-align:middle;"> Português</a> |
   <a href="docs/readme-ko.md"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icons/7.3.2/flags/4x3/kr.svg" width="20" style="vertical-align:middle;"> 한국어</a> |
   <a href="docs/readme-vi.md"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icons/7.3.2/flags/4x3/vn.svg" width="20" style="vertical-align:middle;"> Tiếng Việt</a> |
-  <a href="docs/readme-id.md"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icons/7.3.2/flags/4x3/id.svg" width="20" style="vertical-align:middle;"> Indonesia</a>
+  <a href="docs/readme-id.md"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icons/7.3.2/flags/4x3/id.svg" width="20" style="vertical-align:middle;"> Indonesia</a> |
+  <a href="docs/readme-ar.md"><img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icons/7.3.2/flags/4x3/ps.svg" width="20" style="vertical-align:middle;"> العربية</a>
 </p>
 
 ---

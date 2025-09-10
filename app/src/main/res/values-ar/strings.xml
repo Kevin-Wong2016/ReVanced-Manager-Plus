@@ -1,0 +1,96 @@
+<resources>
+    <string name="app_name">ReVanced Manager Plus</string>
+    
+    <!-- Settings Dialog -->
+    <string name="settings">الإعدادات</string>
+    <string name="theme">المظهر</string>
+    <string name="language">اللغة</string>
+    <string name="theme_light">فاتح</string>
+    <string name="theme_dark">داكن</string>
+    <string name="theme_system">النظام</string>
+    <string name="apply">تطبيق</string>
+    <string name="cancel">إلغاء</string>
+    <string name="restart_app">إعادة تشغيل التطبيق</string>
+    <string name="restart_later">لاحقاً</string>
+    <string name="select_language">اختر اللغة</string>
+    <string name="tap_to_change">اضغط للتغيير</string>
+    
+    <!-- Main Screen -->
+    <string name="confirm">تأكيد</string>
+    <string name="retry">إعادة المحاولة</string>
+    <string name="loading_apps_message">جاري تحميل التطبيقات...</string>
+    <string name="error_prefix">خطأ:  %1$s</string>
+    <string name="revanced_manager_by">ReVanced Manager بواسطة vanced.to</string>
+    
+    <!-- App Card Actions -->
+    <string name="download">تحميل</string>
+    <string name="update">تحديث</string>
+    <string name="open">فتح</string>
+    <string name="uninstall">إلغاء التثبيت</string>
+    <string name="downloading">جاري التحميل</string>
+    <string name="installing">جاري التثبيت</string>
+    <string name="uninstalling">جاري إلغاء التثبيت</string>
+    <string name="unknown">غير معروف</string>
+    <string name="installed_version">المثبت:  الإصدار  %1$s</string>
+    <string name="latest_version">الأحدث:  الإصدار  %1$s</string>
+    <string name="downloading_progress">جاري التحميل %1$d%%</string>
+    
+    <!-- Toast Messages -->
+    <string name="download_starting">بدء التحميل...</string>
+    <string name="download_completed_installing">اكتمل التحميل، بدء التثبيت...</string>
+    <string name="download_failed">فشل التحميل:  %1$s</string>
+    <string name="download_failed_memory">فشل التحميل بسبب عدم كفاية الذاكرة. يرجى إغلاق التطبيقات الأخرى والمحاولة مرة أخرى.</string>
+    <string name="download_failed_storage">فشل التحميل بسبب عدم كفاية مساحة التخزين. يرجى تحرير بعض المساحة والمحاولة مرة أخرى.</string>
+    <string name="insufficient_storage_error">مساحة التخزين غير كافية. المتاح:  %1$d ميجابايت. يرجى تحرير مساحة والمحاولة مرة أخرى.</string>
+    <string name="download_cancelled">تم إلغاء التحميل</string>
+    <string name="installation_started">بدأ التثبيت</string>
+    <string name="installation_completed">اكتمل التثبيت بنجاح</string>
+    <string name="installation_failed_start">فشل في بدء التثبيت</string>
+    <string name="installation_failed_apk_not_found">فشل التثبيت ولم يتم العثور على ملف APK</string>
+    <string name="installation_pending_user_action">في انتظار تأكيد المستخدم للتثبيت</string>
+    <string name="uninstallation_started">بدأ إلغاء التثبيت</string>
+    <string name="uninstallation_completed">اكتمل إلغاء التثبيت بنجاح</string>
+    <string name="uninstallation_failed">فشل إلغاء التثبيت:  %1$s</string>
+    <string name="failed_start_uninstallation">فشل في بدء إلغاء التثبيت</string>
+    <string name="failed_open_app">فشل في فتح التطبيق</string>
+    <string name="failed_open_app_error">فشل في فتح التطبيق:  %1$s</string>
+    <string name="old_version_uninstalled">تم إلغاء تثبيت الإصدار القديم، إعادة محاولة التثبيت...</string>
+    <string name="failed_uninstall_old_version">فشل في إلغاء تثبيت الإصدار القديم</string>
+    <string name="failed_uninstall_old_version_error">فشل في إلغاء تثبيت الإصدار القديم:  %1$s</string>
+    <string name="app_not_installed_proceeding">التطبيق غير مثبت، المتابعة مع التثبيت...</string>
+    <string name="installation_cancelled_by_user">تم إلغاء التثبيت من قبل المستخدم</string>
+    <string name="app_status_updated">تم تحديث حالة التطبيق</string>
+    <string name="apps_updated">تم تحديث %1$d تطبيقات</string>
+    <string name="configuration_saved">تم حفظ الإعدادات</string>
+    <string name="error_applying_language">فشل في تطبيق اللغة</string>
+    
+    <!-- Dialog Titles -->
+    <string name="installation_failed_title">فشل التثبيت</string>
+    <string name="uninstall_required_title">مطلوب إلغاء التثبيت</string>
+    <string name="language_changed_title">تم تغيير اللغة</string>
+    
+    <!-- Dialog Messages -->
+    <string name="installation_failed_retry_message">فشل التثبيت:  %1$s\n\nهل تريد إعادة المحاولة؟ سيتم إلغاء تثبيت الإصدار القديم أولاً إذا كان موجوداً.</string>
+    <string name="uninstall_required_message">لإعادة محاولة تثبيت %1$s، يجب إلغاء تثبيت الإصدار القديم أولاً. المتابعة؟</string>
+    <string name="language_changed_message">تم تغيير اللغة إلى %1$s.\n\nإعادة تشغيل التطبيق الآن لتطبيق التغييرات؟</string>
+    
+    <!-- Auto-install and Background Download -->
+    <string name="download_completed_ready_to_install">اكتمل تحميل %1$s وجاهز للتثبيت</string>
+    <string name="auto_install_enabled">تم تفعيل التثبيت التلقائي</string>
+    <string name="auto_install_disabled">تم إلغاء تفعيل التثبيت التلقائي</string>
+    <string name="pending_downloads_found">تم العثور على %1$d تحميلات معلقة</string>
+    <string name="background_download_completed">اكتمل التحميل في الخلفية</string>
+    
+    <!-- Concurrent Downloads Dialog -->
+    <string name="downloads_complete_title">اكتملت التحميلات</string>
+    <string name="downloads_complete_summary">%1$d مكتمل، %2$d فشل</string>
+    <string name="successfully_downloaded">تم التحميل بنجاح (%1$d)</string>
+    <string name="failed_downloads">التحميلات الفاشلة (%1$d)</string>
+    <string name="install_all_button">تثبيت الكل (%1$d)</string>
+    <string name="install_button">تثبيت</string>
+    <string name="close_button">إغلاق</string>
+    <string name="installing_multiple_apps">جاري تثبيت %1$d تطبيقات...</string>
+    <string name="installing_single_app">جاري تثبيت %1$s...</string>
+    <string name="downloads_in_progress">التحميلات قيد التقدم</string>
+    <string name="concurrent_downloads_active">%1$d تحميلات نشطة</string>
+</resources>

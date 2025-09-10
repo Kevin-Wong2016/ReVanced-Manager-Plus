@@ -1,0 +1,70 @@
+<resources>
+    <string name="app_name">ReVanced Manager Plus</string>
+    
+    <!-- Settings Dialog -->
+    <string name="settings">সেটিংস</string>
+    <string name="theme">থিম</string>
+    <string name="language">ভাষা</string>
+    <string name="theme_light">হালকা</string>
+    <string name="theme_dark">গাঢ়</string>
+    <string name="theme_system">সিস্টেম</string>
+    <string name="apply">প্রয়োগ</string>
+    <string name="cancel">বাতিল</string>
+    <string name="restart_app">অ্যাপ রিস্টার্ট</string>
+    <string name="restart_later">পরে</string>
+    
+    <!-- Main Screen -->
+    <string name="confirm">নিশ্চিত</string>
+    <string name="retry">আবার চেষ্টা</string>
+    <string name="loading_apps_message">অ্যাপ লোড হচ্ছে...</string>
+    <string name="error_prefix">ত্রুটি: %1$s</string>
+    <string name="revanced_manager_by">ReVanced Manager by vanced.to</string>
+    
+    <!-- App Card Actions -->
+    <string name="download">ডাউনলোড</string>
+    <string name="update">আপডেট</string>
+    <string name="open">খুলুন</string>
+    <string name="uninstall">আনইনস্টল</string>
+    <string name="downloading">ডাউনলোড হচ্ছে</string>
+    <string name="installing">ইনস্টল হচ্ছে</string>
+    <string name="uninstalling">আনইনস্টল হচ্ছে</string>
+    <string name="unknown">অজানা</string>
+    <string name="installed_version">ইনস্টল: v%1$s</string>
+    <string name="latest_version">সর্বশেষ: v%1$s</string>
+    <string name="downloading_progress">ডাউনলোড %1$d%%</string>
+    
+    <!-- Toast Messages -->
+    <string name="download_starting">ডাউনলোড শুরু হচ্ছে...</string>
+    <string name="download_completed_installing">ডাউনলোড সম্পন্ন, ইনস্টল শুরু হচ্ছে...</string>
+    <string name="download_failed">ডাউনলোড ব্যর্থ: %1$s</string>
+    <string name="download_failed_memory">অপর্যাপ্ত মেমরির কারণে ডাউনলোড ব্যর্থ। অন্য অ্যাপ বন্ধ করুন এবং আবার চেষ্টা করুন।</string>
+    <string name="download_failed_storage">অপর্যাপ্ত স্টোরেজের কারণে ডাউনলোড ব্যর্থ। স্থান খালি করুন এবং আবার চেষ্টা করুন।</string>
+    <string name="insufficient_storage_error">অপর্যাপ্ত স্টোরেজ। উপলব্ধ: %1$d MB। স্থান খালি করুন এবং আবার চেষ্টা করুন।</string>
+    <string name="download_cancelled">ডাউনলোড বাতিল</string>
+    <string name="installation_started">ইনস্টল শুরু</string>
+    <string name="installation_completed">ইনস্টল সফলভাবে সম্পন্ন</string>
+    <string name="installation_failed_start">ইনস্টল শুরু করতে ব্যর্থ</string>
+    <string name="installation_failed_apk_not_found">ইনস্টল ব্যর্থ এবং APK ফাইল পাওয়া যায়নি</string>
+    <string name="installation_pending_user_action">ইনস্টলের জন্য ব্যবহারকারীর নিশ্চয়তার অপেক্ষা</string>
+    <string name="uninstallation_started">আনইনস্টল শুরু</string>
+    <string name="uninstallation_completed">আনইনস্টল সফলভাবে সম্পন্ন</string>
+    <string name="uninstallation_failed">আনইনস্টল ব্যর্থ: %1$s</string>
+    <string name="failed_start_uninstallation">আনইনস্টল শুরু করতে ব্যর্থ</string>
+    <string name="failed_open_app">অ্যাপ খুলতে ব্যর্থ</string>
+    <string name="failed_open_app_error">অ্যাপ খুলতে ব্যর্থ: %1$s</string>
+    <string name="old_version_uninstalled">পুরানো সংস্করণ আনইনস্টল, ইনস্টল আবার চেষ্টা...</string>
+    <string name="failed_uninstall_old_version">পুরানো সংস্করণ আনইনস্টল করতে ব্যর্থ</string>
+    <string name="failed_uninstall_old_version_error">পুরানো সংস্করণ আনইনস্টল করতে ব্যর্থ: %1$s</string>
+    <string name="app_status_updated">অ্যাপ স্ট্যাটাস আপডেট</string>
+    <string name="configuration_saved">কনফিগারেশন সংরক্ষিত</string>
+    
+    <!-- Dialog Titles -->
+    <string name="installation_failed_title">ইনস্টল ব্যর্থ</string>
+    <string name="uninstall_required_title">আনইনস্টল প্রয়োজন</string>
+    <string name="language_changed_title">ভাষা পরিবর্তিত</string>
+    
+    <!-- Dialog Messages -->
+    <string name="installation_failed_retry_message">ইনস্টল ব্যর্থ: %1$s\n\nআবার চেষ্টা করবেন? এটি প্রথমে পুরানো সংস্করণ আনইনস্টল করবে।</string>
+    <string name="uninstall_required_message">%1$s এর ইনস্টল আবার চেষ্টা করতে, প্রথমে পুরানো সংস্করণ আনইনস্টল করতে হবে। চালিয়ে যান?</string>
+    <string name="language_changed_message">ভাষা %1$s এ পরিবর্তিত হয়েছে।\n\nপরিবর্তন প্রয়োগ করতে এখনই অ্যাপ রিস্টার্ট করবেন?</string>
+</resources> 

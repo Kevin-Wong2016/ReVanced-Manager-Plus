@@ -1,0 +1,70 @@
+<resources>
+    <string name="app_name">ReVanced Manager Plus</string>
+    
+    <!-- Settings Dialog -->
+    <string name="settings">Configurações</string>
+    <string name="theme">Tema</string>
+    <string name="language">Idioma</string>
+    <string name="theme_light">Claro</string>
+    <string name="theme_dark">Escuro</string>
+    <string name="theme_system">Sistema</string>
+    <string name="apply">Aplicar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="restart_app">Reiniciar App</string>
+    <string name="restart_later">Mais tarde</string>
+    
+    <!-- Main Screen -->
+    <string name="confirm">Confirmar</string>
+    <string name="retry">Tentar novamente</string>
+    <string name="loading_apps_message">Carregando aplicativos...</string>
+    <string name="error_prefix">Erro: %1$s</string>
+    <string name="revanced_manager_by">ReVanced Manager por vanced.to</string>
+    
+    <!-- App Card Actions -->
+    <string name="download">Baixar</string>
+    <string name="update">Atualizar</string>
+    <string name="open">Abrir</string>
+    <string name="uninstall">Desinstalar</string>
+    <string name="downloading">Baixando</string>
+    <string name="installing">Instalando</string>
+    <string name="uninstalling">Desinstalando</string>
+    <string name="unknown">Desconhecido</string>
+    <string name="installed_version">Instalado: v%1$s</string>
+    <string name="latest_version">Mais recente: v%1$s</string>
+    <string name="downloading_progress">Baixando %1$d%%</string>
+    
+    <!-- Toast Messages -->
+    <string name="download_starting">Iniciando download...</string>
+    <string name="download_completed_installing">Download concluído, iniciando instalação...</string>
+    <string name="download_failed">Download falhou: %1$s</string>
+    <string name="download_failed_memory">Download falhou devido à memória insuficiente. Feche outros aplicativos e tente novamente.</string>
+    <string name="download_failed_storage">Download falhou devido ao espaço de armazenamento insuficiente. Libere espaço e tente novamente.</string>
+    <string name="insufficient_storage_error">Espaço de armazenamento insuficiente. Disponível: %1$d MB. Libere espaço e tente novamente.</string>
+    <string name="download_cancelled">Download cancelado</string>
+    <string name="installation_started">Instalação iniciada</string>
+    <string name="installation_completed">Instalação concluída com sucesso</string>
+    <string name="installation_failed_start">Falha ao iniciar instalação</string>
+    <string name="installation_failed_apk_not_found">Instalação falhou e arquivo APK não encontrado</string>
+    <string name="installation_pending_user_action">Aguardando confirmação do usuário para instalar</string>
+    <string name="uninstallation_started">Desinstalação iniciada</string>
+    <string name="uninstallation_completed">Desinstalação concluída com sucesso</string>
+    <string name="uninstallation_failed">Desinstalação falhou: %1$s</string>
+    <string name="failed_start_uninstallation">Falha ao iniciar desinstalação</string>
+    <string name="failed_open_app">Falha ao abrir aplicativo</string>
+    <string name="failed_open_app_error">Falha ao abrir aplicativo: %1$s</string>
+    <string name="old_version_uninstalled">Versão antiga desinstalada, tentando instalação novamente...</string>
+    <string name="failed_uninstall_old_version">Falha ao desinstalar versão antiga</string>
+    <string name="failed_uninstall_old_version_error">Falha ao desinstalar versão antiga: %1$s</string>
+    <string name="app_status_updated">Status do aplicativo atualizado</string>
+    <string name="configuration_saved">Configuração salva</string>
+    
+    <!-- Dialog Titles -->
+    <string name="installation_failed_title">Instalação Falhou</string>
+    <string name="uninstall_required_title">Desinstalação Necessária</string>
+    <string name="language_changed_title">Idioma Alterado</string>
+    
+    <!-- Dialog Messages -->
+    <string name="installation_failed_retry_message">Instalação falhou: %1$s\n\nDeseja tentar novamente? Isso desinstalará a versão antiga primeiro, se existir.</string>
+    <string name="uninstall_required_message">Para tentar novamente a instalação de %1$s, a versão antiga precisa ser desinstalada primeiro. Continuar?</string>
+    <string name="language_changed_message">O idioma foi alterado para %1$s.\n\nReiniciar o aplicativo agora para aplicar as alterações?</string>
+</resources> 

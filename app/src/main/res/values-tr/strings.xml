@@ -1,0 +1,70 @@
+<resources>
+    <string name="app_name">ReVanced Manager Plus</string>
+    
+    <!-- Settings Dialog -->
+    <string name="settings">Ayarlar</string>
+    <string name="theme">Tema</string>
+    <string name="language">Dil</string>
+    <string name="theme_light">Açık</string>
+    <string name="theme_dark">Koyu</string>
+    <string name="theme_system">Sistem</string>
+    <string name="apply">Uygula</string>
+    <string name="cancel">İptal</string>
+    <string name="restart_app">Uygulamayı Yeniden Başlat</string>
+    <string name="restart_later">Sonra</string>
+    
+    <!-- Main Screen -->
+    <string name="confirm">Onayla</string>
+    <string name="retry">Yeniden Dene</string>
+    <string name="loading_apps_message">Uygulamalar yükleniyor...</string>
+    <string name="error_prefix">Hata: %1$s</string>
+    <string name="revanced_manager_by">ReVanced Manager by vanced.to</string>
+    
+    <!-- App Card Actions -->
+    <string name="download">İndir</string>
+    <string name="update">Güncelle</string>
+    <string name="open">Aç</string>
+    <string name="uninstall">Kaldır</string>
+    <string name="downloading">İndiriliyor</string>
+    <string name="installing">Kuruluyor</string>
+    <string name="uninstalling">Kaldırılıyor</string>
+    <string name="unknown">Bilinmiyor</string>
+    <string name="installed_version">Kurulu: v%1$s</string>
+    <string name="latest_version">Son sürüm: v%1$s</string>
+    <string name="downloading_progress">İndiriliyor %1$d%%</string>
+    
+    <!-- Toast Messages -->
+    <string name="download_starting">İndirme başlatılıyor...</string>
+    <string name="download_completed_installing">İndirme tamamlandı, kurulum başlatılıyor...</string>
+    <string name="download_failed">İndirme başarısız: %1$s</string>
+    <string name="download_failed_memory">Yetersiz bellek nedeniyle indirme başarısız. Lütfen diğer uygulamaları kapatın ve tekrar deneyin.</string>
+    <string name="download_failed_storage">Yetersiz depolama alanı nedeniyle indirme başarısız. Lütfen alan boşaltın ve tekrar deneyin.</string>
+    <string name="insufficient_storage_error">Yetersiz depolama alanı. Mevcut: %1$d MB. Lütfen alan boşaltın ve tekrar deneyin.</string>
+    <string name="download_cancelled">İndirme iptal edildi</string>
+    <string name="installation_started">Kurulum başlatıldı</string>
+    <string name="installation_completed">Kurulum başarıyla tamamlandı</string>
+    <string name="installation_failed_start">Kurulum başlatılamadı</string>
+    <string name="installation_failed_apk_not_found">Kurulum başarısız ve APK dosyası bulunamadı</string>
+    <string name="installation_pending_user_action">Kurulum için kullanıcı onayı bekleniyor</string>
+    <string name="uninstallation_started">Kaldırma başlatıldı</string>
+    <string name="uninstallation_completed">Kaldırma başarıyla tamamlandı</string>
+    <string name="uninstallation_failed">Kaldırma başarısız: %1$s</string>
+    <string name="failed_start_uninstallation">Kaldırma başlatılamadı</string>
+    <string name="failed_open_app">Uygulama açılamadı</string>
+    <string name="failed_open_app_error">Uygulama açılamadı: %1$s</string>
+    <string name="old_version_uninstalled">Eski sürüm kaldırıldı, kurulum yeniden deneniyor...</string>
+    <string name="failed_uninstall_old_version">Eski sürüm kaldırılamadı</string>
+    <string name="failed_uninstall_old_version_error">Eski sürüm kaldırılamadı: %1$s</string>
+    <string name="app_status_updated">Uygulama durumu güncellendi</string>
+    <string name="configuration_saved">Yapılandırma kaydedildi</string>
+    
+    <!-- Dialog Titles -->
+    <string name="installation_failed_title">Kurulum Başarısız</string>
+    <string name="uninstall_required_title">Kaldırma Gerekli</string>
+    <string name="language_changed_title">Dil Değiştirildi</string>
+    
+    <!-- Dialog Messages -->
+    <string name="installation_failed_retry_message">Kurulum başarısız: %1$s\n\nYeniden denemek istiyor musunuz? Bu, eski sürümü önce kaldıracaktır.</string>
+    <string name="uninstall_required_message">%1$s kurulumunu yeniden denemek için önce eski sürümün kaldırılması gerekiyor. Devam edilsin mi?</string>
+    <string name="language_changed_message">Dil %1$s olarak değiştirildi.\n\nDeğişikliklerin uygulanması için şimdi uygulamayı yeniden başlatmak istiyor musunuz?</string>
+</resources> 
