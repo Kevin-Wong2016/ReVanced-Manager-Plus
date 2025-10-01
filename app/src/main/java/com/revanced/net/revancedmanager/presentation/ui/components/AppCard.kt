@@ -1,6 +1,8 @@
 package com.revanced.net.revancedmanager.presentation.ui.components
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -13,8 +15,11 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Download
+import androidx.compose.material.icons.filled.ExpandLess
+import androidx.compose.material.icons.filled.ExpandMore
 import androidx.compose.material.icons.filled.PlayArrow
 import androidx.compose.material.icons.filled.Refresh
+import androidx.compose.material.icons.filled.Sync
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
@@ -25,8 +30,13 @@ import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.stringResource
@@ -53,6 +63,8 @@ fun AppCard(
     onInstallClick: () -> Unit,
     onUninstallClick: () -> Unit,
     onOpenClick: () -> Unit,
+    onReinstallClick: () -> Unit,
+    isCompactMode: Boolean = false,
     modifier: Modifier = Modifier
 ) {
     Card(
@@ -137,24 +149,70 @@ fun AppCard(
             
             Spacer(modifier = Modifier.height(8.dp))
             
-            // App description
-            Text(
-                text = app.description,
-                style = MaterialTheme.typography.bodySmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                maxLines = 2,
-                overflow = TextOverflow.Ellipsis
-            )
+            // App description with read more functionality
+            var isExpanded by remember { mutableStateOf(false) }
             
-            // MicroG requirement indicator
-            // if (app.requiresMicroG) {
-            //     Spacer(modifier = Modifier.height(8.dp))
-            //     Text(
-            //         text = "⚠️ Requires MicroG",
-            //         style = MaterialTheme.typography.bodySmall,
-            //         color = MaterialTheme.colorScheme.tertiary
-            //     )
-            // }
+            Column {
+                if (isExpanded) {
+                    // Full description - clickable to collapse
+                    Text(
+                        text = app.description,
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        modifier = Modifier.clickable { isExpanded = false }
+                    )
+                    
+                    // MicroG requirement indicator
+                    if (app.requiresMicroG) {
+                        Spacer(modifier = Modifier.height(8.dp))
+                        Text(
+                            text = "⚠️ Requires MicroG",
+                            style = MaterialTheme.typography.labelSmall,
+                            color = Color(0xFFFFA726)
+                        )
+                    }
+
+                    // Show less button
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .clickable { isExpanded = false }
+                            .padding(top = 4.dp),
+                        horizontalArrangement = Arrangement.Center,
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Text(
+                            text = stringResource(R.string.show_less),
+                            style = MaterialTheme.typography.labelSmall,
+                            color = MaterialTheme.colorScheme.primary,
+                            fontWeight = FontWeight.Medium
+                        )
+                        Icon(
+                            imageVector = Icons.Default.ExpandLess,
+                            contentDescription = stringResource(R.string.show_less),
+                            tint = MaterialTheme.colorScheme.primary,
+                            modifier = Modifier
+                                .size(16.dp)
+                                .padding(start = 2.dp)
+                        )
+                    }
+                } else {
+                    // Collapsed description - clickable to expand
+                    Text(
+                        text = app.description,
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        maxLines = 2,
+                        overflow = TextOverflow.Ellipsis,
+                        modifier = Modifier.clickable { 
+                            if (app.description.length > 100) {
+                                isExpanded = true 
+                            }
+                        }
+                    )
+                }
+            }
+            
             
             Spacer(modifier = Modifier.height(6.dp))
             
@@ -209,6 +267,15 @@ fun AppCard(
                             color = MaterialTheme.colorScheme.openColor,
                             modifier = Modifier.weight(1f)
                         )
+                        if (!isCompactMode) {
+                            CompactActionButton(
+                                text = stringResource(R.string.reinstall),
+                                icon = Icons.Default.Sync,
+                                onClick = onReinstallClick,
+                                color = MaterialTheme.colorScheme.updateColor,
+                                modifier = Modifier.weight(1f)
+                            )
+                        }
                         CompactActionButton(
                             text = stringResource(R.string.uninstall),
                             icon = Icons.Default.Delete,
@@ -354,4 +421,4 @@ private fun CompactActionButton(
             overflow = TextOverflow.Ellipsis
         )
     }
-} 
+}

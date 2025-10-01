@@ -69,4 +69,43 @@
     <string name="installation_failed_retry_message">इंस्टॉलेशन असफल: %1$s\n\nक्या आप पुनः प्रयास करना चाहते हैं? यह पहले पुराने संस्करण को अनइंस्टॉल करेगा यदि मौजूद है।</string>
     <string name="uninstall_required_message">%1$s की इंस्टॉलेशन को फिर से कोशिश करने के लिए, पुराना संस्करण पहले अनइंस्टॉल करना होगा। जारी रखें?</string>
     <string name="language_changed_message">भाषा %1$s में बदली गई है।\n\nपरिवर्तन लागू करने के लिए अभी ऐप को पुनः आरंभ करें?</string>
-</resources> 
+    
+    <!-- Compact Mode -->
+    <string name="compact_mode">कॉम्पैक्ट मोड</string>
+    
+    <!-- Read More/Show Less -->
+    <string name="read_more">और पढ़ें</string>
+    <string name="show_less">कम दिखाएं</string>
+    
+    <!-- Reinstall Feature -->
+    <string name="reinstall">पुनः इंस्टॉल करें</string>
+    <string name="reinstall_started">पुनः इंस्टॉलेशन शुरू</string>
+    <string name="reinstall_completed">पुनः इंस्टॉलेशन पूरा</string>
+    <string name="reinstall_failed">पुनः इंस्टॉलेशन असफल</string>
+    <string name="app_not_installed_proceeding">ऐप इंस्टॉल नहीं है, इंस्टॉलेशन जारी रखा जा रहा है...</string>
+    <string name="installation_cancelled_by_user">उपयोगकर्ता द्वारा इंस्टॉलेशन रद्द किया गया</string>
+    <string name="apps_updated">ऐप्स अपडेट किए गए</string>
+    <string name="error_applying_language">भाषा लागू करने में त्रुटि: %1$s</string>
+    <string name="reinstall_confirmation_title">पुनः इंस्टॉल की पुष्टि करें</string>
+    <string name="reinstall_confirmation_message">क्या आप वाकई %1$s को पुनः इंस्टॉल करना चाहते हैं? यह वर्तमान संस्करण को हटा देगा और नया इंस्टॉल करेगा।</string>
+    
+    <!-- Auto-install and Background Download -->
+    <string name="download_completed_ready_to_install">डाउनलोड पूरा और इंस्टॉल के लिए तैयार</string>
+    <string name="auto_install_enabled">ऑटो इंस्टॉल सक्षम</string>
+    <string name="auto_install_disabled">ऑटो इंस्टॉल अक्षम</string>
+    <string name="pending_downloads_found">लंबित डाउनलोड मिले</string>
+    <string name="background_download_completed">बैकग्राउंड डाउनलोड पूरा</string>
+    
+    <!-- Concurrent Downloads Dialog -->
+    <string name="downloads_complete_title">डाउनलोड पूरे</string>
+    <string name="downloads_complete_summary">%2$d में से %1$d ऐप्स सफलतापूर्वक डाउनलोड किए गए</string>
+    <string name="successfully_downloaded">सफलतापूर्वक डाउनलोड किए गए:</string>
+    <string name="failed_downloads">असफल डाउनलोड:</string>
+    <string name="install_all_button">सभी इंस्टॉल करें</string>
+    <string name="install_button">इंस्टॉल करें</string>
+    <string name="close_button">बंद करें</string>
+    <string name="installing_multiple_apps">%1$d ऐप्स इंस्टॉल कर रहे हैं...</string>
+    <string name="installing_single_app">%1$s इंस्टॉल कर रहे हैं...</string>
+    <string name="downloads_in_progress">डाउनलोड प्रगति में</string>
+    <string name="concurrent_downloads_active">%1$d समानांतर डाउनलोड सक्रिय</string>
+</resources>

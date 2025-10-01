@@ -18,6 +18,8 @@ sealed class AppEvent {
     data class DownloadApp(val packageName: String, val downloadUrl: String) : AppEvent()
     data class InstallApp(val packageName: String, val apkFilePath: String) : AppEvent()
     data class UninstallApp(val packageName: String) : AppEvent()
+    data class ShowReinstallConfirmation(val packageName: String) : AppEvent()
+    data class ReinstallApp(val packageName: String) : AppEvent()
     data class OpenApp(val packageName: String) : AppEvent()
     data class UpdateAppProgress(val packageName: String, val progress: Float) : AppEvent()
     data class UpdateAppStatus(val packageName: String, val status: AppStatus) : AppEvent()
@@ -48,5 +50,6 @@ sealed class AppEvent {
     // Configuration events
     data object ShowConfigDialog : AppEvent()
     data class SaveConfiguration(val config: AppConfig) : AppEvent()
+    data class UpdateCompactMode(val enabled: Boolean) : AppEvent()
     data object LoadConfiguration : AppEvent()
-} 
+}

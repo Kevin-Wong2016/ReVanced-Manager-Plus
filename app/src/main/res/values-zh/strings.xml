@@ -5,6 +5,7 @@
     <string name="settings">设置</string>
     <string name="theme">主题</string>
     <string name="language">语言</string>
+    <string name="compact_mode">紧凑界面</string>
     <string name="theme_light">浅色</string>
     <string name="theme_dark">深色</string>
     <string name="theme_system">跟随系统</string>
@@ -34,6 +35,12 @@
     <string name="installed_version">已安装: v%1$s</string>
     <string name="latest_version">最新版: v%1$s</string>
     <string name="downloading_progress">正在下载 %1$d%%</string>
+    <string name="read_more">阅读更多</string>
+    <string name="show_less">收起</string>
+    <string name="reinstall">重新安装</string>
+    <string name="reinstall_started">重新安装已开始</string>
+    <string name="reinstall_completed">重新安装成功</string>
+    <string name="reinstall_failed">重新安装失败</string>
     
     <!-- Toast Messages -->
     <string name="download_starting">开始下载...</string>
@@ -57,16 +64,42 @@
     <string name="old_version_uninstalled">旧版本已卸载，正在重试安装...</string>
     <string name="failed_uninstall_old_version">卸载旧版本失败</string>
     <string name="failed_uninstall_old_version_error">卸载旧版本失败：%1$s</string>
+    <string name="app_not_installed_proceeding">应用未安装，继续安装...</string>
+    <string name="installation_cancelled_by_user">用户取消安装</string>
     <string name="app_status_updated">应用状态已更新</string>
+    <string name="apps_updated">已更新%1$d个应用</string>
     <string name="configuration_saved">配置已保存</string>
+    <string name="error_applying_language">应用语言失败</string>
     
     <!-- Dialog Titles -->
     <string name="installation_failed_title">安装失败</string>
     <string name="uninstall_required_title">需要卸载</string>
     <string name="language_changed_title">语言已更改</string>
+    <string name="reinstall_confirmation_title">重新安装应用</string>
     
     <!-- Dialog Messages -->
     <string name="installation_failed_retry_message">安装失败：%1$s\n\n您想要重试吗？如果存在旧版本，这将首先卸载旧版本。</string>
     <string name="uninstall_required_message">要重试安装%1$s，需要先卸载旧版本。继续？</string>
     <string name="language_changed_message">语言已更改为%1$s。\n\n现在重启应用以应用更改？</string>
-</resources> 
+    <string name="reinstall_confirmation_message">这将卸载当前版本的%1$s并下载安装最新版本。\n\n您想要继续吗？</string>
+    
+    <!-- Auto-install and Background Download -->
+    <string name="download_completed_ready_to_install">%1$s下载完成，准备安装</string>
+    <string name="auto_install_enabled">自动安装已启用</string>
+    <string name="auto_install_disabled">自动安装已禁用</string>
+    <string name="pending_downloads_found">发现%1$d个待下载项</string>
+    <string name="background_download_completed">后台下载完成</string>
+    
+    <!-- Concurrent Downloads Dialog -->
+    <string name="downloads_complete_title">下载完成</string>
+    <string name="downloads_complete_summary">%1$d成功，%2$d失败</string>
+    <string name="successfully_downloaded">下载成功（%1$d）</string>
+    <string name="failed_downloads">下载失败（%1$d）</string>
+    <string name="install_all_button">全部安装（%1$d）</string>
+    <string name="install_button">安装</string>
+    <string name="close_button">关闭</string>
+    <string name="installing_multiple_apps">正在安装%1$d个应用...</string>
+    <string name="installing_single_app">正在安装%1$s...</string>
+    <string name="downloads_in_progress">下载进行中</string>
+    <string name="concurrent_downloads_active">%1$d个下载活跃</string>
+</resources>

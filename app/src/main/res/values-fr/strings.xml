@@ -5,6 +5,7 @@
     <string name="settings">Paramètres</string>
     <string name="theme">Thème</string>
     <string name="language">Langue</string>
+    <string name="compact_mode">Interface compacte</string>
     <string name="theme_light">Clair</string>
     <string name="theme_dark">Sombre</string>
     <string name="theme_system">Système</string>
@@ -12,6 +13,8 @@
     <string name="cancel">Annuler</string>
     <string name="restart_app">Redémarrer l\'app</string>
     <string name="restart_later">Plus tard</string>
+    <string name="select_language">Sélectionner la langue</string>
+    <string name="tap_to_change">Appuyer pour changer</string>
     
     <!-- Main Screen -->
     <string name="confirm">Confirmer</string>
@@ -32,6 +35,12 @@
     <string name="installed_version">Installé : v%1$s</string>
     <string name="latest_version">Dernière : v%1$s</string>
     <string name="downloading_progress">Téléchargement %1$d%%</string>
+    <string name="read_more">Lire plus</string>
+    <string name="show_less">Afficher moins</string>
+    <string name="reinstall">Réinstaller</string>
+    <string name="reinstall_started">Réinstallation démarrée</string>
+    <string name="reinstall_completed">Réinstallation terminée avec succès</string>
+    <string name="reinstall_failed">Échec de la réinstallation</string>
     
     <!-- Toast Messages -->
     <string name="download_starting">Démarrage du téléchargement...</string>
@@ -55,16 +64,42 @@
     <string name="old_version_uninstalled">Ancienne version désinstallée, nouvelle tentative d\'installation...</string>
     <string name="failed_uninstall_old_version">Échec de la désinstallation de l\'ancienne version</string>
     <string name="failed_uninstall_old_version_error">Échec de la désinstallation de l\'ancienne version : %1$s</string>
+    <string name="app_not_installed_proceeding">Application non installée, procédure d\'installation...</string>
+    <string name="installation_cancelled_by_user">Installation annulée par l\'utilisateur</string>
     <string name="app_status_updated">Statut de l\'application mis à jour</string>
+    <string name="apps_updated">%1$d applications mises à jour</string>
     <string name="configuration_saved">Configuration sauvegardée</string>
+    <string name="error_applying_language">Échec de l\'application de la langue</string>
     
     <!-- Dialog Titles -->
     <string name="installation_failed_title">Installation échouée</string>
     <string name="uninstall_required_title">Désinstallation requise</string>
     <string name="language_changed_title">Langue modifiée</string>
+    <string name="reinstall_confirmation_title">Réinstaller l\'application</string>
     
     <!-- Dialog Messages -->
     <string name="installation_failed_retry_message">Installation échouée : %1$s\n\nVoulez-vous réessayer ? Cela désinstallera d\'abord l\'ancienne version si elle existe.</string>
     <string name="uninstall_required_message">Pour réessayer l\'installation de %1$s, l\'ancienne version doit d\'abord être désinstallée. Continuer ?</string>
     <string name="language_changed_message">La langue a été changée pour %1$s.\n\nRedémarrer l\'application maintenant pour appliquer les modifications ?</string>
-</resources> 
+    <string name="reinstall_confirmation_message">Cela désinstallera la version actuelle de %1$s et téléchargera et installera la dernière version.\n\nVoulez-vous continuer ?</string>
+    
+    <!-- Auto-install and Background Download -->
+    <string name="download_completed_ready_to_install">%1$s téléchargement terminé et prêt à installer</string>
+    <string name="auto_install_enabled">Installation automatique activée</string>
+    <string name="auto_install_disabled">Installation automatique désactivée</string>
+    <string name="pending_downloads_found">%1$d téléchargements en attente trouvés</string>
+    <string name="background_download_completed">Téléchargement en arrière-plan terminé</string>
+    
+    <!-- Concurrent Downloads Dialog -->
+    <string name="downloads_complete_title">Téléchargements terminés</string>
+    <string name="downloads_complete_summary">%1$d terminés, %2$d échoués</string>
+    <string name="successfully_downloaded">Téléchargés avec succès (%1$d)</string>
+    <string name="failed_downloads">Téléchargements échoués (%1$d)</string>
+    <string name="install_all_button">Tout installer (%1$d)</string>
+    <string name="install_button">Installer</string>
+    <string name="close_button">Fermer</string>
+    <string name="installing_multiple_apps">Installation de %1$d applications...</string>
+    <string name="installing_single_app">Installation de %1$s...</string>
+    <string name="downloads_in_progress">Téléchargements en cours</string>
+    <string name="concurrent_downloads_active">%1$d téléchargements actifs</string>
+</resources>

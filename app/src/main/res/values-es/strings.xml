@@ -5,6 +5,7 @@
     <string name="settings">Configuración</string>
     <string name="theme">Tema</string>
     <string name="language">Idioma</string>
+    <string name="compact_mode">UI Compacta</string>
     <string name="theme_light">Claro</string>
     <string name="theme_dark">Oscuro</string>
     <string name="theme_system">Sistema</string>
@@ -12,6 +13,8 @@
     <string name="cancel">Cancelar</string>
     <string name="restart_app">Reiniciar App</string>
     <string name="restart_later">Más tarde</string>
+    <string name="select_language">Seleccionar Idioma</string>
+    <string name="tap_to_change">Toca para cambiar</string>
     
     <!-- Main Screen -->
     <string name="confirm">Confirmar</string>
@@ -32,6 +35,12 @@
     <string name="installed_version">Instalada: v%1$s</string>
     <string name="latest_version">Última: v%1$s</string>
     <string name="downloading_progress">Descargando %1$d%%</string>
+    <string name="read_more">Leer más</string>
+    <string name="show_less">Mostrar menos</string>
+    <string name="reinstall">Reinstalar</string>
+    <string name="reinstall_started">Reinstalación iniciada</string>
+    <string name="reinstall_completed">Reinstalación completada exitosamente</string>
+    <string name="reinstall_failed">Reinstalación falló</string>
     
     <!-- Toast Messages -->
     <string name="download_starting">Iniciando descarga...</string>
@@ -54,17 +63,43 @@
     <string name="failed_open_app_error">No se pudo abrir la app: %1$s</string>
     <string name="old_version_uninstalled">Versión anterior desinstalada, reintentando instalación...</string>
     <string name="failed_uninstall_old_version">No se pudo desinstalar versión anterior</string>
-    <string name="failed_uninstall_old_version_error">No se pudo desinstalar versión anterior: %1$s</string>
-    <string name="app_status_updated">Estado de app actualizado</string>
+    <string name="failed_uninstall_old_version_error">Error al desinstalar la versión anterior: %1$s</string>
+    <string name="app_not_installed_proceeding">Aplicación no instalada, procediendo con la instalación...</string>
+    <string name="installation_cancelled_by_user">Instalación cancelada por el usuario</string>
+    <string name="app_status_updated">Estado de la aplicación actualizado</string>
+    <string name="apps_updated">%1$d aplicaciones actualizadas</string>
     <string name="configuration_saved">Configuración guardada</string>
+    <string name="error_applying_language">Error al aplicar el idioma</string>
     
     <!-- Dialog Titles -->
-    <string name="installation_failed_title">Instalación Falló</string>
-    <string name="uninstall_required_title">Desinstalación Requerida</string>
-    <string name="language_changed_title">Idioma Cambiado</string>
+    <string name="installation_failed_title">Instalación fallida</string>
+    <string name="uninstall_required_title">Desinstalación requerida</string>
+    <string name="language_changed_title">Idioma cambiado</string>
+    <string name="reinstall_confirmation_title">Reinstalar aplicación</string>
     
     <!-- Dialog Messages -->
-    <string name="installation_failed_retry_message">Instalación falló: %1$s\n\n¿Desea reintentar? Esto desinstalará la versión anterior primero si existe.</string>
-    <string name="uninstall_required_message">Para reintentar la instalación de %1$s, la versión anterior debe desinstalarse primero. ¿Continuar?</string>
-    <string name="language_changed_message">El idioma ha cambiado a %1$s.\n\n¿Reiniciar la app ahora para aplicar los cambios?</string>
-</resources> 
+    <string name="installation_failed_retry_message">Instalación fallida: %1$s\n\n¿Quieres reintentar? Esto desinstalará primero la versión anterior si existe.</string>
+    <string name="uninstall_required_message">Para reintentar la instalación de %1$s, la versión anterior debe ser desinstalada primero. ¿Continuar?</string>
+    <string name="language_changed_message">El idioma ha sido cambiado a %1$s.\n\n¿Reiniciar la aplicación ahora para aplicar los cambios?</string>
+    <string name="reinstall_confirmation_message">Esto desinstalará la versión actual de %1$s y descargará e instalará la última versión.\n\n¿Quieres continuar?</string>
+    
+    <!-- Auto-install and Background Download -->
+    <string name="download_completed_ready_to_install">%1$s descarga completada y lista para instalar</string>
+    <string name="auto_install_enabled">Instalación automática habilitada</string>
+    <string name="auto_install_disabled">Instalación automática deshabilitada</string>
+    <string name="pending_downloads_found">%1$d descargas pendientes encontradas</string>
+    <string name="background_download_completed">Descarga en segundo plano completada</string>
+    
+    <!-- Concurrent Downloads Dialog -->
+    <string name="downloads_complete_title">Descargas completadas</string>
+    <string name="downloads_complete_summary">%1$d completadas, %2$d fallidas</string>
+    <string name="successfully_downloaded">Descargadas exitosamente (%1$d)</string>
+    <string name="failed_downloads">Descargas fallidas (%1$d)</string>
+    <string name="install_all_button">Instalar todo (%1$d)</string>
+    <string name="install_button">Instalar</string>
+    <string name="close_button">Cerrar</string>
+    <string name="installing_multiple_apps">Instalando %1$d aplicaciones...</string>
+    <string name="installing_single_app">Instalando %1$s...</string>
+    <string name="downloads_in_progress">Descargas en progreso</string>
+    <string name="concurrent_downloads_active">%1$d descargas activas</string>
+</resources>

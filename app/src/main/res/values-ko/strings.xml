@@ -5,6 +5,7 @@
     <string name="settings">설정</string>
     <string name="theme">테마</string>
     <string name="language">언어</string>
+    <string name="compact_mode">컴팩트 UI</string>
     <string name="theme_light">밝음</string>
     <string name="theme_dark">어둠</string>
     <string name="theme_system">시스템</string>
@@ -12,6 +13,8 @@
     <string name="cancel">취소</string>
     <string name="restart_app">앱 재시작</string>
     <string name="restart_later">나중에</string>
+    <string name="select_language">언어 선택</string>
+    <string name="tap_to_change">탭하여 변경</string>
     
     <!-- Main Screen -->
     <string name="confirm">확인</string>
@@ -32,6 +35,12 @@
     <string name="installed_version">설치됨: v%1$s</string>
     <string name="latest_version">최신: v%1$s</string>
     <string name="downloading_progress">다운로드 %1$d%%</string>
+    <string name="read_more">더 읽기</string>
+    <string name="show_less">접기</string>
+    <string name="reinstall">재설치</string>
+    <string name="reinstall_started">재설치 시작됨</string>
+    <string name="reinstall_completed">재설치 성공적으로 완료됨</string>
+    <string name="reinstall_failed">재설치 실패</string>
     
     <!-- Toast Messages -->
     <string name="download_starting">다운로드 시작 중...</string>
@@ -55,16 +64,42 @@
     <string name="old_version_uninstalled">이전 버전 제거됨, 설치 재시도 중...</string>
     <string name="failed_uninstall_old_version">이전 버전 제거 실패</string>
     <string name="failed_uninstall_old_version_error">이전 버전 제거 실패: %1$s</string>
+    <string name="app_not_installed_proceeding">앱이 설치되지 않음, 설치 진행...</string>
+    <string name="installation_cancelled_by_user">사용자가 설치를 취소함</string>
     <string name="app_status_updated">앱 상태 업데이트됨</string>
+    <string name="apps_updated">%1$d개 앱 업데이트됨</string>
     <string name="configuration_saved">설정 저장됨</string>
+    <string name="error_applying_language">언어 적용 실패</string>
     
     <!-- Dialog Titles -->
     <string name="installation_failed_title">설치 실패</string>
     <string name="uninstall_required_title">제거 필요</string>
     <string name="language_changed_title">언어 변경됨</string>
+    <string name="reinstall_confirmation_title">애플리케이션 재설치</string>
     
     <!-- Dialog Messages -->
     <string name="installation_failed_retry_message">설치 실패: %1$s\n\n다시 시도하시겠습니까? 이전 버전이 있으면 먼저 제거됩니다.</string>
     <string name="uninstall_required_message">%1$s 설치를 다시 시도하려면 이전 버전을 먼저 제거해야 합니다. 계속하시겠습니까?</string>
     <string name="language_changed_message">언어가 %1$s(으)로 변경되었습니다.\n\n변경사항을 적용하려면 지금 앱을 재시작하시겠습니까?</string>
-</resources> 
+    <string name="reinstall_confirmation_message">이것은 %1$s의 현재 버전을 제거하고 최신 버전을 다운로드하여 설치합니다.\n\n계속하시겠습니까?</string>
+    
+    <!-- Auto-install and Background Download -->
+    <string name="download_completed_ready_to_install">%1$s 다운로드 완료 및 설치 준비됨</string>
+    <string name="auto_install_enabled">자동 설치 활성화됨</string>
+    <string name="auto_install_disabled">자동 설치 비활성화됨</string>
+    <string name="pending_downloads_found">%1$d개의 대기 중인 다운로드 발견</string>
+    <string name="background_download_completed">백그라운드 다운로드 완료</string>
+    
+    <!-- Concurrent Downloads Dialog -->
+    <string name="downloads_complete_title">다운로드 완료</string>
+    <string name="downloads_complete_summary">%1$d개 완료, %2$d개 실패</string>
+    <string name="successfully_downloaded">성공적으로 다운로드됨 (%1$d)</string>
+    <string name="failed_downloads">실패한 다운로드 (%1$d)</string>
+    <string name="install_all_button">모두 설치 (%1$d)</string>
+    <string name="install_button">설치</string>
+    <string name="close_button">닫기</string>
+    <string name="installing_multiple_apps">%1$d개 앱 설치 중...</string>
+    <string name="installing_single_app">%1$s 설치 중...</string>
+    <string name="downloads_in_progress">다운로드 진행 중</string>
+    <string name="concurrent_downloads_active">%1$d개 다운로드 활성</string>
+</resources>

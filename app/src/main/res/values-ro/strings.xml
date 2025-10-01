@@ -67,4 +67,51 @@
     <string name="installation_failed_retry_message">Instalare eșuată: %1$s\n\nVreți să încercați din nou? Aceasta va dezinstala mai întâi versiunea veche dacă există.</string>
     <string name="uninstall_required_message">Pentru a reîncerca instalarea %1$s, versiunea veche trebuie dezinstalată mai întâi. Continuați?</string>
     <string name="language_changed_message">Limba a fost schimbată în %1$s.\n\nReporniți aplicația acum pentru a aplica modificările?</string>
-</resources> 
+    
+    <!-- Language Selection -->
+    <string name="select_language">Selectează limba</string>
+    <string name="tap_to_change">Atingeți pentru a schimba</string>
+    
+    <!-- Compact Mode -->
+    <string name="compact_mode">Mod compact</string>
+    
+    <!-- Reinstall Feature -->
+    <string name="reinstall">Reinstalează</string>
+    <string name="reinstall_started">Reinstalare începută</string>
+    <string name="reinstall_completed">Reinstalare completată</string>
+    <string name="reinstall_failed">Reinstalare eșuată</string>
+    
+    <!-- Read More/Show Less -->
+    <string name="read_more">Citește mai mult</string>
+    <string name="show_less">Arată mai puțin</string>
+    
+    <!-- Additional Installation Messages -->
+    <string name="app_not_installed_proceeding">Aplicația nu este instalată, se continuă cu descărcarea</string>
+    <string name="installation_cancelled_by_user">Instalare anulată de utilizator</string>
+    <string name="apps_updated">Aplicații actualizate</string>
+    <string name="error_applying_language">Eroare la aplicarea limbii</string>
+    
+    <!-- Reinstall Confirmation Dialog -->
+    <string name="reinstall_confirmation_title">Confirmă reinstalarea</string>
+    <string name="reinstall_confirmation_message">Sunteți sigur că doriți să reinstalați %1$s? Aceasta va dezinstala versiunea curentă și va instala cea mai recentă versiune.</string>
+    
+    <!-- Auto-install and Background Download -->
+    <string name="download_completed_ready_to_install">Descărcare completată și gata pentru instalare</string>
+    <string name="auto_install_enabled">Instalare automată activată</string>
+    <string name="auto_install_disabled">Instalare automată dezactivată</string>
+    <string name="pending_downloads_found">Descărcări în așteptare găsite</string>
+    <string name="background_download_completed">Descărcare în fundal completată</string>
+    
+    <!-- Concurrent Downloads Dialog -->
+    <string name="downloads_complete_title">Descărcări complete</string>
+    <string name="downloads_complete_summary">%1$d din %2$d descărcări completate cu succes</string>
+    <string name="successfully_downloaded">Descărcat cu succes</string>
+    <string name="failed_downloads">Descărcări eșuate</string>
+    <string name="install_all_button">Instalează toate</string>
+    <string name="install_button">Instalează</string>
+    <string name="close_button">Închide</string>
+    <string name="installing_multiple_apps">Se instalează %1$d aplicații</string>
+    <string name="installing_single_app">Se instalează %1$s</string>
+    <string name="downloads_in_progress">Descărcări în progres</string>
+    <string name="concurrent_downloads_active">%1$d descărcări simultane active</string>
+</resources>

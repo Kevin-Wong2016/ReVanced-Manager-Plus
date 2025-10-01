@@ -70,4 +70,42 @@
     <string name="installation_failed_retry_message">Instalasi gagal: %1$s\n\nCoba lagi? Ini akan menghapus versi lama terlebih dahulu jika ada.</string>
     <string name="uninstall_required_message">Untuk mencoba instalasi %1$s lagi, versi lama perlu dihapus dulu. Lanjutkan?</string>
     <string name="language_changed_message">Bahasa telah diubah ke %1$s.\n\nMulai ulang aplikasi sekarang untuk menerapkan perubahan?</string>
-</resources> 
+    
+    <!-- Compact Mode -->
+    <string name="compact_mode">Mode Kompak</string>
+    
+    <!-- Read More/Show Less -->
+    <string name="read_more">Baca Selengkapnya</string>
+    <string name="show_less">Tampilkan Lebih Sedikit</string>
+    
+    <!-- Reinstall Feature -->
+    <string name="reinstall">Instal Ulang</string>
+    <string name="reinstall_started">Instalasi ulang dimulai</string>
+    <string name="reinstall_completed">Instalasi ulang selesai</string>
+    <string name="reinstall_failed">Instalasi ulang gagal</string>
+    <string name="app_not_installed_proceeding">Aplikasi tidak terpasang, melanjutkan instalasi...</string>
+    <string name="installation_cancelled_by_user">Instalasi dibatalkan oleh pengguna</string>
+    <string name="apps_updated">Aplikasi diperbarui</string>
+    <string name="reinstall_confirmation_title">Konfirmasi Instalasi Ulang</string>
+    <string name="reinstall_confirmation_message">Apakah Anda yakin ingin menginstal ulang %1$s? Ini akan menghapus versi saat ini dan menginstal yang baru.</string>
+    
+    <!-- Auto-install and Background Download -->
+    <string name="download_completed_ready_to_install">Unduhan selesai dan siap untuk diinstal</string>
+    <string name="auto_install_enabled">Instalasi otomatis diaktifkan</string>
+    <string name="auto_install_disabled">Instalasi otomatis dinonaktifkan</string>
+    <string name="pending_downloads_found">Unduhan tertunda ditemukan</string>
+    <string name="background_download_completed">Unduhan latar belakang selesai</string>
+    
+    <!-- Concurrent Downloads Dialog -->
+    <string name="downloads_complete_title">Unduhan Selesai</string>
+    <string name="downloads_complete_summary">%1$d dari %2$d aplikasi berhasil diunduh</string>
+    <string name="successfully_downloaded">Berhasil diunduh:</string>
+    <string name="failed_downloads">Unduhan gagal:</string>
+    <string name="install_all_button">Instal Semua</string>
+    <string name="install_button">Instal</string>
+    <string name="close_button">Tutup</string>
+    <string name="installing_multiple_apps">Menginstal %1$d aplikasi...</string>
+    <string name="installing_single_app">Menginstal %1$s...</string>
+    <string name="downloads_in_progress">Unduhan sedang berlangsung</string>
+    <string name="concurrent_downloads_active">%1$d unduhan bersamaan aktif</string>
+</resources>

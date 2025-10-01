@@ -67,4 +67,51 @@
     <string name="installation_failed_retry_message">Instalacja nieudana: %1$s\n\nCzy chcesz spróbować ponownie? To najpierw odinstaluje starą wersję jeśli istnieje.</string>
     <string name="uninstall_required_message">Aby ponowić instalację %1$s, stara wersja musi zostać najpierw odinstalowana. Kontynuować?</string>
     <string name="language_changed_message">Język został zmieniony na %1$s.\n\nUruchomić aplikację ponownie teraz, aby zastosować zmiany?</string>
-</resources> 
+    
+    <!-- Language Selection -->
+    <string name="select_language">Wybierz język</string>
+    <string name="tap_to_change">Dotknij, aby zmienić</string>
+    
+    <!-- Compact Mode -->
+    <string name="compact_mode">Tryb kompaktowy</string>
+    
+    <!-- Reinstall Feature -->
+    <string name="reinstall">Zainstaluj ponownie</string>
+    <string name="reinstall_started">Ponowna instalacja rozpoczęta</string>
+    <string name="reinstall_completed">Ponowna instalacja ukończona</string>
+    <string name="reinstall_failed">Ponowna instalacja nieudana</string>
+    
+    <!-- Read More/Show Less -->
+    <string name="read_more">Czytaj więcej</string>
+    <string name="show_less">Pokaż mniej</string>
+    
+    <!-- Additional Installation Messages -->
+    <string name="app_not_installed_proceeding">Aplikacja nie jest zainstalowana, kontynuowanie pobierania</string>
+    <string name="installation_cancelled_by_user">Instalacja anulowana przez użytkownika</string>
+    <string name="apps_updated">Aplikacje zaktualizowane</string>
+    <string name="error_applying_language">Błąd podczas stosowania języka</string>
+    
+    <!-- Reinstall Confirmation Dialog -->
+    <string name="reinstall_confirmation_title">Potwierdź ponowną instalację</string>
+    <string name="reinstall_confirmation_message">Czy na pewno chcesz ponownie zainstalować %1$s? To odinstaluje obecną wersję i zainstaluje najnowszą wersję.</string>
+    
+    <!-- Auto-install and Background Download -->
+    <string name="download_completed_ready_to_install">Pobieranie ukończone i gotowe do instalacji</string>
+    <string name="auto_install_enabled">Automatyczna instalacja włączona</string>
+    <string name="auto_install_disabled">Automatyczna instalacja wyłączona</string>
+    <string name="pending_downloads_found">Znaleziono oczekujące pobierania</string>
+    <string name="background_download_completed">Pobieranie w tle ukończone</string>
+    
+    <!-- Concurrent Downloads Dialog -->
+    <string name="downloads_complete_title">Pobierania ukończone</string>
+    <string name="downloads_complete_summary">%1$d z %2$d pobrań ukończonych pomyślnie</string>
+    <string name="successfully_downloaded">Pomyślnie pobrane</string>
+    <string name="failed_downloads">Nieudane pobierania</string>
+    <string name="install_all_button">Zainstaluj wszystkie</string>
+    <string name="install_button">Zainstaluj</string>
+    <string name="close_button">Zamknij</string>
+    <string name="installing_multiple_apps">Instalowanie %1$d aplikacji</string>
+    <string name="installing_single_app">Instalowanie %1$s</string>
+    <string name="downloads_in_progress">Pobierania w toku</string>
+    <string name="concurrent_downloads_active">%1$d równoczesnych pobrań aktywnych</string>
+</resources>

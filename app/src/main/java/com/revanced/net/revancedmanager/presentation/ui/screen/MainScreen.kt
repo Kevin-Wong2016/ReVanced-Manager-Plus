@@ -38,6 +38,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -53,6 +56,7 @@ import com.revanced.net.revancedmanager.presentation.bloc.AppState
 import com.revanced.net.revancedmanager.presentation.bloc.DialogState
 import com.revanced.net.revancedmanager.presentation.ui.components.AppCard
 import com.revanced.net.revancedmanager.presentation.ui.components.ConfigDialog
+import kotlinx.coroutines.delay
 
 /**
  * Main screen of the ReVanced Manager app
@@ -66,12 +70,31 @@ fun MainScreen(
     val state by viewModel.state.collectAsState()
     val toastMessage by viewModel.toastMessage.collectAsState()
     val context = LocalContext.current
+    
+    // Remember the current toast to cancel it when a new one appears
+    var currentToast by remember { mutableStateOf<Toast?>(null) }
 
-    // Handle toast messages
+    // Handle toast messages with cancellation of previous toast
     LaunchedEffect(toastMessage) {
         toastMessage?.let { message ->
-            Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
+            // Cancel any existing toast immediately
+            currentToast?.cancel()
+            
+            // Create and show new toast with shorter duration
+            val newToast = Toast.makeText(context, message, Toast.LENGTH_SHORT).apply {
+                duration = Toast.LENGTH_SHORT
+            }
+            
+            currentToast = newToast
+            newToast.show()
+            
+            // Clear the toast message from ViewModel
             viewModel.clearToast()
+            
+            // Auto-dismiss the toast after a shorter time (1 second instead of 2)
+            delay(1000)
+            newToast.cancel()
+            currentToast = null
         }
     }
 
@@ -110,6 +133,7 @@ fun MainScreen(
                 AppListScreen(
                     apps = currentState.apps,
                     onEvent = viewModel::handleEvent,
+                    isCompactMode = currentState.config.compactMode,
                     modifier = Modifier.padding(paddingValues)
                 )
                 
@@ -139,7 +163,8 @@ fun MainScreen(
                             ConfigDialog(
                                 config = dialogState.config,
                                 onSave = dialogState.onSave,
-                                onCancel = dialogState.onCancel
+                                onCancel = dialogState.onCancel,
+                                onCompactModeChange = { }
                             )
                         }
                     }
@@ -178,7 +203,8 @@ fun MainScreen(
                             ConfigDialog(
                                 config = dialogState.config,
                                 onSave = dialogState.onSave,
-                                onCancel = dialogState.onCancel
+                                onCancel = dialogState.onCancel,
+                                onCompactModeChange = { }
                             )
                         }
                     }
@@ -332,6 +358,7 @@ private fun ErrorScreen(
 private fun AppListScreen(
     apps: List<com.revanced.net.revancedmanager.domain.model.RevancedApp>,
     onEvent: (AppEvent) -> Unit,
+    isCompactMode: Boolean = false,
     modifier: Modifier = Modifier
 ) {
     val context = LocalContext.current
@@ -368,9 +395,13 @@ private fun AppListScreen(
                 onUninstallClick = {
                     onEvent(AppEvent.UninstallApp(app.packageName))
                 },
+                onReinstallClick = {
+                    onEvent(AppEvent.ShowReinstallConfirmation(app.packageName))
+                },
                 onOpenClick = {
                     onEvent(AppEvent.OpenApp(app.packageName))
-                }
+                },
+                isCompactMode = isCompactMode
             )
         }
 
@@ -494,4 +525,4 @@ private fun launchUrl(context: Context, url: String) {
     } catch (e: Exception) {
         Toast.makeText(context, "Failed to open URL", Toast.LENGTH_SHORT).show()
     }
-} 
+}

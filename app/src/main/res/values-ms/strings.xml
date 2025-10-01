@@ -67,4 +67,51 @@
     <string name="installation_failed_retry_message">Pemasangan gagal: %1$s\n\nAdakah anda ingin cuba lagi? Ini akan menyah pasang versi lama dahulu jika wujud.</string>
     <string name="uninstall_required_message">Untuk mencuba pemasangan %1$s semula, versi lama perlu dinyah pasang dahulu. Teruskan?</string>
     <string name="language_changed_message">Bahasa telah diubah kepada %1$s.\n\nMula semula app sekarang untuk melaksanakan perubahan?</string>
-</resources> 
+    
+    <!-- Language Selection -->
+    <string name="select_language">Pilih Bahasa</string>
+    <string name="tap_to_change">Ketik untuk menukar</string>
+    
+    <!-- Compact Mode -->
+    <string name="compact_mode">Mod Padat</string>
+    
+    <!-- Reinstall Feature -->
+    <string name="reinstall">Pasang Semula</string>
+    <string name="reinstall_started">Pemasangan semula dimulakan</string>
+    <string name="reinstall_completed">Pemasangan semula selesai</string>
+    <string name="reinstall_failed">Pemasangan semula gagal</string>
+    
+    <!-- Read More/Show Less -->
+    <string name="read_more">Baca Lagi</string>
+    <string name="show_less">Tunjuk Kurang</string>
+    
+    <!-- Additional Installation Messages -->
+    <string name="app_not_installed_proceeding">App tidak dipasang, meneruskan dengan muat turun</string>
+    <string name="installation_cancelled_by_user">Pemasangan dibatalkan oleh pengguna</string>
+    <string name="apps_updated">App dikemas kini</string>
+    <string name="error_applying_language">Ralat menggunakan bahasa</string>
+    
+    <!-- Reinstall Confirmation Dialog -->
+    <string name="reinstall_confirmation_title">Sahkan Pemasangan Semula</string>
+    <string name="reinstall_confirmation_message">Adakah anda pasti ingin memasang semula %1$s? Ini akan menyah pasang versi semasa dan memasang versi terbaru.</string>
+    
+    <!-- Auto-install and Background Download -->
+    <string name="download_completed_ready_to_install">Muat turun selesai dan sedia untuk dipasang</string>
+    <string name="auto_install_enabled">Pemasangan automatik diaktifkan</string>
+    <string name="auto_install_disabled">Pemasangan automatik dinyahaktifkan</string>
+    <string name="pending_downloads_found">Muat turun tertunda dijumpai</string>
+    <string name="background_download_completed">Muat turun latar belakang selesai</string>
+    
+    <!-- Concurrent Downloads Dialog -->
+    <string name="downloads_complete_title">Muat Turun Selesai</string>
+    <string name="downloads_complete_summary">%1$d daripada %2$d muat turun berjaya selesai</string>
+    <string name="successfully_downloaded">Berjaya dimuat turun</string>
+    <string name="failed_downloads">Muat turun gagal</string>
+    <string name="install_all_button">Pasang Semua</string>
+    <string name="install_button">Pasang</string>
+    <string name="close_button">Tutup</string>
+    <string name="installing_multiple_apps">Memasang %1$d app</string>
+    <string name="installing_single_app">Memasang %1$s</string>
+    <string name="downloads_in_progress">Muat turun sedang berlangsung</string>
+    <string name="concurrent_downloads_active">%1$d muat turun serentak aktif</string>
+</resources>

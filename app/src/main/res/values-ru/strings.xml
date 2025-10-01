@@ -67,4 +67,47 @@
     <string name="installation_failed_retry_message">Установка не удалась: %1$s\n\nПопробовать снова? Это сначала удалит старую версию, если она существует.</string>
     <string name="uninstall_required_message">Чтобы повторить установку %1$s, сначала нужно удалить старую версию. Продолжить?</string>
     <string name="language_changed_message">Язык изменён на %1$s.\n\nПерезапустить приложение сейчас, чтобы применить изменения?</string>
-</resources> 
+    
+    <!-- Language Selection -->
+    <string name="select_language">Выберите язык</string>
+    <string name="tap_to_change">Нажмите, чтобы изменить</string>
+    
+    <!-- Compact Mode -->
+    <string name="compact_mode">Компактный режим</string>
+    
+    <!-- Read More/Show Less -->
+    <string name="read_more">Читать далее</string>
+    <string name="show_less">Показать меньше</string>
+    
+    <!-- Reinstall Feature -->
+    <string name="reinstall">Переустановить</string>
+    <string name="reinstall_started">Переустановка начата</string>
+    <string name="reinstall_completed">Переустановка завершена</string>
+    <string name="reinstall_failed">Переустановка не удалась</string>
+    <string name="app_not_installed_proceeding">Приложение не установлено, продолжение установки...</string>
+    <string name="installation_cancelled_by_user">Установка отменена пользователем</string>
+    <string name="apps_updated">Приложения обновлены</string>
+    <string name="error_applying_language">Ошибка применения языка: %1$s</string>
+    <string name="reinstall_confirmation_title">Подтвердить переустановку</string>
+    <string name="reinstall_confirmation_message">Вы уверены, что хотите переустановить %1$s? Это удалит текущую версию и установит новую.</string>
+    
+    <!-- Auto-install and Background Download -->
+    <string name="download_completed_ready_to_install">Загрузка завершена и готова к установке</string>
+    <string name="auto_install_enabled">Автоустановка включена</string>
+    <string name="auto_install_disabled">Автоустановка отключена</string>
+    <string name="pending_downloads_found">Найдены ожидающие загрузки</string>
+    <string name="background_download_completed">Фоновая загрузка завершена</string>
+    
+    <!-- Concurrent Downloads Dialog -->
+    <string name="downloads_complete_title">Загрузки завершены</string>
+    <string name="downloads_complete_summary">%1$d из %2$d приложений успешно загружены</string>
+    <string name="successfully_downloaded">Успешно загружено:</string>
+    <string name="failed_downloads">Неудачные загрузки:</string>
+    <string name="install_all_button">Установить все</string>
+    <string name="install_button">Установить</string>
+    <string name="close_button">Закрыть</string>
+    <string name="installing_multiple_apps">Установка %1$d приложений...</string>
+    <string name="installing_single_app">Установка %1$s...</string>
+    <string name="downloads_in_progress">Загрузки в процессе</string>
+    <string name="concurrent_downloads_active">Активно %1$d одновременных загрузок</string>
+</resources>

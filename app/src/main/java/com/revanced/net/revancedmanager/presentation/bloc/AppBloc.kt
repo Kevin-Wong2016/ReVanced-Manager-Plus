@@ -425,6 +425,8 @@ class AppBloc @Inject constructor(
             is AppEvent.DownloadApp -> downloadApp(event.packageName, event.downloadUrl)
             is AppEvent.InstallApp -> installApp(event.packageName, event.apkFilePath)
             is AppEvent.UninstallApp -> uninstallApp(event.packageName)
+            is AppEvent.ShowReinstallConfirmation -> showReinstallConfirmation(event.packageName)
+            is AppEvent.ReinstallApp -> reinstallApp(event.packageName)
             is AppEvent.OpenApp -> openApp(event.packageName)
             is AppEvent.UpdateAppProgress -> updateAppProgress(event.packageName, event.progress)
             is AppEvent.UpdateAppStatus -> updateAppStatus(event.packageName, event.status)
@@ -444,6 +446,7 @@ class AppBloc @Inject constructor(
             is AppEvent.ShowConfirmationDialog -> showConfirmationDialog(event.title, event.message, event.onConfirm, event.onCancel)
             is AppEvent.ShowConfigDialog -> showConfigDialog()
             is AppEvent.SaveConfiguration -> saveConfiguration(event.config)
+            is AppEvent.UpdateCompactMode -> updateCompactMode(event.enabled)
             is AppEvent.LoadConfiguration -> loadConfiguration()
             
             // Concurrent downloads events - simplified for auto-install
@@ -1221,6 +1224,116 @@ class AppBloc @Inject constructor(
     }
 
     /**
+     * Show confirmation dialog before reinstalling an app
+     */
+    private fun showReinstallConfirmation(packageName: String) {
+        val currentState = _state.value
+        if (currentState is AppState.Success) {
+            val app = currentState.apps.find { it.packageName == packageName }
+            if (app != null) {
+                val title = stringProvider.getString(R.string.reinstall_confirmation_title)
+                val message = stringProvider.getString(R.string.reinstall_confirmation_message, app.title)
+                val confirmEvent = AppEvent.ReinstallApp(packageName)
+                val cancelEvent = AppEvent.DismissDialog
+                
+                handleEvent(AppEvent.ShowConfirmationDialog(title, message, confirmEvent, cancelEvent))
+            }
+        }
+    }
+
+    /**
+     * Reinstall an app (uninstall -> download -> install)
+     */
+    private fun reinstallApp(packageName: String) {
+        dismissDialog()
+        
+        viewModelScope.launch {
+            try {
+                val currentState = _state.value
+                if (currentState is AppState.Success) {
+                    val app = currentState.apps.find { it.packageName == packageName }
+                    if (app != null) {
+                        // Step 1: Uninstall
+                        updateAppStatus(packageName, AppStatus.UNINSTALLING)
+                        showToast(stringProvider.getString(R.string.reinstall_started))
+                        
+                        val uninstallResult = useCases.uninstallAppUseCase(packageName)
+                        when (uninstallResult) {
+                            is Result.Success -> {
+                                if (uninstallResult.data) {
+                                    // Wait for uninstallation to complete
+                                    delay(3000)
+                                    
+                                    // Step 2: Download latest version
+                                    updateAppStatus(packageName, AppStatus.DOWNLOADING)
+                                    updateAppProgress(packageName, 0f)
+                                    
+                                    // Clear completed downloads tracking
+                                    completedDownloads.remove(packageName)
+                                    
+                                    simpleDownloadManager.downloadApp(packageName, app.downloadUrl)
+                                        .catch { error ->
+                                            Log.e(TAG, "Reinstall download failed for $packageName", error)
+                                            showError(stringProvider.getString(R.string.reinstall_failed, error.message ?: "Download failed"))
+                                            updateSingleAppStatus(packageName)
+                                        }
+                                        .onEach { download ->
+                                            // Update progress
+                                            updateAppProgress(packageName, download.progress)
+                                            
+                                            // Download completed, proceed to install
+                                             if (download.progress >= 1.0f) {
+                                                 // Step 3: Install
+                                                 val filePath = download.filePath
+                                                 if (filePath != null) {
+                                                     updateAppStatus(packageName, AppStatus.INSTALLING)
+                                                     val installResult = useCases.installAppUseCase(packageName, filePath)
+                                                     when (installResult) {
+                                                         is Result.Success -> {
+                                                             if (installResult.data) {
+                                                                 showToast(stringProvider.getString(R.string.reinstall_completed))
+                                                             } else {
+                                                                 showError(stringProvider.getString(R.string.reinstall_failed))
+                                                                 updateSingleAppStatus(packageName)
+                                                             }
+                                                         }
+                                                         is Result.Error -> {
+                                                             showError(stringProvider.getString(R.string.reinstall_failed, installResult.message))
+                                                             updateSingleAppStatus(packageName)
+                                                         }
+                                                         is Result.Loading -> {
+                                                             // Should not happen
+                                                         }
+                                                     }
+                                                 } else {
+                                                     showError(stringProvider.getString(R.string.reinstall_failed, "File path is null"))
+                                                     updateSingleAppStatus(packageName)
+                                                 }
+                                             }
+                                        }.launchIn(this@launch)
+                                } else {
+                                    showError(stringProvider.getString(R.string.reinstall_failed))
+                                    updateSingleAppStatus(packageName)
+                                }
+                            }
+                            is Result.Error -> {
+                                showError(stringProvider.getString(R.string.reinstall_failed, uninstallResult.message))
+                                updateSingleAppStatus(packageName)
+                            }
+                            is Result.Loading -> {
+                                // Should not happen
+                            }
+                        }
+                    }
+                }
+            } catch (e: Exception) {
+                showError(stringProvider.getString(R.string.reinstall_failed, e.message ?: ""))
+                updateSingleAppStatus(packageName)
+            }
+        }
+    }
+
+    /**
      * Open an installed app
      */
     private fun openApp(packageName: String) {
@@ -1495,6 +1608,23 @@ class AppBloc @Inject constructor(
     }
     
     /**
+     * Update compact mode setting
+     */
+    private fun updateCompactMode(enabled: Boolean) {
+        Log.i(TAG, "🔧 Updating compact mode to: $enabled")
+        
+        val currentState = _state.value
+        val currentConfig = when (currentState) {
+            is AppState.Success -> currentState.config
+            is AppState.Error -> currentState.config
+            else -> AppConfig()
+        }
+        
+        val newConfig = currentConfig.copy(compactMode = enabled)
+        saveConfiguration(newConfig)
+    }
+    
+    /**
      * Apply language immediately using LocaleHelper with activity recreation
      */
     private fun applyLanguageImmediately(newLanguage: Language) {
@@ -1730,4 +1860,4 @@ class AppBloc @Inject constructor(
         }
     }
     
-} 
+}

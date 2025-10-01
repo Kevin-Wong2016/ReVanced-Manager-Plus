@@ -67,4 +67,51 @@
     <string name="installation_failed_retry_message">Kurulum başarısız: %1$s\n\nYeniden denemek istiyor musunuz? Bu, eski sürümü önce kaldıracaktır.</string>
     <string name="uninstall_required_message">%1$s kurulumunu yeniden denemek için önce eski sürümün kaldırılması gerekiyor. Devam edilsin mi?</string>
     <string name="language_changed_message">Dil %1$s olarak değiştirildi.\n\nDeğişikliklerin uygulanması için şimdi uygulamayı yeniden başlatmak istiyor musunuz?</string>
-</resources> 
+    
+    <!-- Language Selection -->
+    <string name="select_language">Dil seç</string>
+    <string name="tap_to_change">Değiştirmek için dokunun</string>
+    
+    <!-- Compact Mode -->
+    <string name="compact_mode">Kompakt mod</string>
+    
+    <!-- Reinstall Feature -->
+    <string name="reinstall">Yeniden kur</string>
+    <string name="reinstall_started">Yeniden kurulum başlatıldı</string>
+    <string name="reinstall_completed">Yeniden kurulum tamamlandı</string>
+    <string name="reinstall_failed">Yeniden kurulum başarısız</string>
+    
+    <!-- Read More/Show Less -->
+    <string name="read_more">Daha fazla oku</string>
+    <string name="show_less">Daha az göster</string>
+    
+    <!-- Additional Installation Messages -->
+    <string name="app_not_installed_proceeding">Uygulama kurulu değil, indirme ile devam ediliyor</string>
+    <string name="installation_cancelled_by_user">Kurulum kullanıcı tarafından iptal edildi</string>
+    <string name="apps_updated">Uygulamalar güncellendi</string>
+    <string name="error_applying_language">Dil uygulanırken hata</string>
+    
+    <!-- Reinstall Confirmation Dialog -->
+    <string name="reinstall_confirmation_title">Yeniden kurulumu onayla</string>
+    <string name="reinstall_confirmation_message">%1$s uygulamasını yeniden kurmak istediğinizden emin misiniz? Bu, mevcut sürümü kaldıracak ve en son sürümü kuracaktır.</string>
+    
+    <!-- Auto-install and Background Download -->
+    <string name="download_completed_ready_to_install">İndirme tamamlandı ve kuruluma hazır</string>
+    <string name="auto_install_enabled">Otomatik kurulum etkinleştirildi</string>
+    <string name="auto_install_disabled">Otomatik kurulum devre dışı bırakıldı</string>
+    <string name="pending_downloads_found">Bekleyen indirmeler bulundu</string>
+    <string name="background_download_completed">Arka plan indirmesi tamamlandı</string>
+    
+    <!-- Concurrent Downloads Dialog -->
+    <string name="downloads_complete_title">İndirmeler tamamlandı</string>
+    <string name="downloads_complete_summary">%2$d indirmeden %1$d tanesi başarıyla tamamlandı</string>
+    <string name="successfully_downloaded">Başarıyla indirildi</string>
+    <string name="failed_downloads">Başarısız indirmeler</string>
+    <string name="install_all_button">Tümünü kur</string>
+    <string name="install_button">Kur</string>
+    <string name="close_button">Kapat</string>
+    <string name="installing_multiple_apps">%1$d uygulama kuruluyor</string>
+    <string name="installing_single_app">%1$s kuruluyor</string>
+    <string name="downloads_in_progress">İndirmeler devam ediyor</string>
+    <string name="concurrent_downloads_active">%1$d eşzamanlı indirme aktif</string>
+</resources>

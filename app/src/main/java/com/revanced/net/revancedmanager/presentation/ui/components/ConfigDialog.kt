@@ -33,11 +33,13 @@ import com.revanced.net.revancedmanager.domain.model.ThemeMode
 fun ConfigDialog(
     config: AppConfig,
     onSave: (AppConfig) -> Unit,
-    onCancel: () -> Unit
+    onCancel: () -> Unit,
+    onCompactModeChange: (Boolean) -> Unit = {}
 ) {
     // Initialize state with current config values to ensure they display properly
     var selectedThemeMode by remember(config) { mutableStateOf(config.themeMode) }
     var selectedLanguage by remember(config) { mutableStateOf(config.language) }
+    var compactModeEnabled by remember(config) { mutableStateOf(config.compactMode) }
     var showThemeSelector by remember { mutableStateOf(false) }
     var showLanguageSelector by remember { mutableStateOf(false) }
 
@@ -309,12 +311,57 @@ fun ConfigDialog(
                         }
                     }
                 }
+
+                // Compact Mode Section
+                Column {
+                    Text(
+                        text = stringResource(R.string.compact_mode),
+                        style = MaterialTheme.typography.titleMedium,
+                        fontWeight = FontWeight.SemiBold,
+                        modifier = Modifier.padding(bottom = 8.dp)
+                    )
+
+                    Card(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .border(
+                                2.dp,
+                                MaterialTheme.colorScheme.primary.copy(alpha = 0.3f),
+                                RoundedCornerShape(12.dp)
+                            ),
+                        colors = CardDefaults.cardColors(
+                            containerColor = MaterialTheme.colorScheme.surfaceVariant
+                        ),
+                        elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
+                    ) {
+                        Row(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(16.dp),
+                            horizontalArrangement = Arrangement.SpaceBetween,
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            Text(
+                                text = stringResource(R.string.compact_mode),
+                                style = MaterialTheme.typography.bodyLarge,
+                                fontWeight = FontWeight.Medium
+                            )
+                            
+                            Switch(
+                            checked = compactModeEnabled,
+                            onCheckedChange = {
+                                compactModeEnabled = it
+                            }
+                        )
+                        }
+                    }
+                }
             }
         },
         confirmButton = {
             Button(
                 onClick = {
-                    onSave(AppConfig(selectedThemeMode, selectedLanguage))
+                    onSave(AppConfig(selectedThemeMode, selectedLanguage, compactModeEnabled))
                 }
             ) {
                 Text(stringResource(R.string.apply))
@@ -427,4 +474,4 @@ private fun LanguageItem(
             fontWeight = if (isSelected) FontWeight.Medium else FontWeight.Normal
         )
     }
-} 
+}

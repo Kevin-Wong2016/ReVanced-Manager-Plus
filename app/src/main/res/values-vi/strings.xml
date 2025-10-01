@@ -5,6 +5,7 @@
     <string name="settings">Cài đặt</string>
     <string name="theme">Giao diện</string>
     <string name="language">Ngôn ngữ</string>
+    <string name="compact_mode">Giao diện thu gọn</string>
     <string name="theme_light">Sáng</string>
     <string name="theme_dark">Tối</string>
     <string name="theme_system">Theo hệ thống</string>
@@ -27,6 +28,10 @@
     <string name="update">Cập nhật</string>
     <string name="open">Mở</string>
     <string name="uninstall">Gỡ cài đặt</string>
+    <string name="reinstall">Cài lại</string>
+    <string name="reinstall_started">Đã bắt đầu cài lại</string>
+    <string name="reinstall_completed">Cài lại thành công</string>
+    <string name="reinstall_failed">Cài lại thất bại</string>
     <string name="downloading">Đang tải</string>
     <string name="installing">Đang cài đặt</string>
     <string name="uninstalling">Đang gỡ cài đặt</string>
@@ -34,6 +39,8 @@
     <string name="installed_version">Đã cài: v%1$s</string>
     <string name="latest_version">Mới nhất: v%1$s</string>
     <string name="downloading_progress">Đang tải %1$d%%</string>
+    <string name="read_more">Đọc thêm</string>
+    <string name="show_less">Thu gọn</string>
     
     <!-- Toast Messages -->
     <string name="download_starting">Đang bắt đầu tải xuống...</string>
@@ -57,16 +64,42 @@
     <string name="old_version_uninstalled">Đã gỡ phiên bản cũ, thử lại cài đặt...</string>
     <string name="failed_uninstall_old_version">Không thể gỡ phiên bản cũ</string>
     <string name="failed_uninstall_old_version_error">Không thể gỡ phiên bản cũ: %1$s</string>
+    <string name="app_not_installed_proceeding">Ứng dụng chưa được cài đặt, tiến hành cài đặt...</string>
+    <string name="installation_cancelled_by_user">Người dùng đã hủy cài đặt</string>
     <string name="app_status_updated">Đã cập nhật trạng thái ứng dụng</string>
+    <string name="apps_updated">Đã cập nhật %1$d ứng dụng</string>
     <string name="configuration_saved">Cấu hình đã được lưu</string>
+    <string name="error_applying_language">Không thể áp dụng ngôn ngữ</string>
     
     <!-- Dialog Titles -->
     <string name="installation_failed_title">Cài đặt thất bại</string>
     <string name="uninstall_required_title">Yêu cầu gỡ cài đặt</string>
     <string name="language_changed_title">Đã thay đổi ngôn ngữ</string>
+    <string name="reinstall_confirmation_title">Cài lại ứng dụng</string>
     
     <!-- Dialog Messages -->
     <string name="installation_failed_retry_message">Cài đặt thất bại: %1$s\n\nBạn có muốn thử lại không? Điều này sẽ gỡ phiên bản cũ trước nếu tồn tại.</string>
     <string name="uninstall_required_message">Để thử lại cài đặt %1$s, phiên bản cũ cần được gỡ trước. Tiếp tục?</string>
     <string name="language_changed_message">Ngôn ngữ đã được thay đổi thành %1$s.\n\nKhởi động lại ứng dụng ngay bây giờ để áp dụng thay đổi?</string>
-</resources> 
+    <string name="reinstall_confirmation_message">Điều này sẽ gỡ cài đặt phiên bản hiện tại của %1$s và tải xuống cài đặt phiên bản mới nhất.\n\nBạn có muốn tiếp tục không?</string>
+    
+    <!-- Auto-install and Background Download -->
+    <string name="download_completed_ready_to_install">%1$s đã tải xong và sẵn sàng cài đặt</string>
+    <string name="auto_install_enabled">Đã bật tự động cài đặt</string>
+    <string name="auto_install_disabled">Đã tắt tự động cài đặt</string>
+    <string name="pending_downloads_found">Tìm thấy %1$d tải xuống đang chờ</string>
+    <string name="background_download_completed">Tải xuống nền đã hoàn thành</string>
+    
+    <!-- Concurrent Downloads Dialog -->
+    <string name="downloads_complete_title">Tải xuống hoàn thành</string>
+    <string name="downloads_complete_summary">%1$d thành công, %2$d thất bại</string>
+    <string name="successfully_downloaded">Tải thành công (%1$d)</string>
+    <string name="failed_downloads">Tải thất bại (%1$d)</string>
+    <string name="install_all_button">Cài tất cả (%1$d)</string>
+    <string name="install_button">Cài đặt</string>
+    <string name="close_button">Đóng</string>
+    <string name="installing_multiple_apps">Đang cài %1$d ứng dụng...</string>
+    <string name="installing_single_app">Đang cài %1$s...</string>
+    <string name="downloads_in_progress">Đang tải xuống</string>
+    <string name="concurrent_downloads_active">%1$d tải xuống đang hoạt động</string>
+</resources>

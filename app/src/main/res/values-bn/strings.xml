@@ -67,4 +67,51 @@
     <string name="installation_failed_retry_message">ইনস্টল ব্যর্থ: %1$s\n\nআবার চেষ্টা করবেন? এটি প্রথমে পুরানো সংস্করণ আনইনস্টল করবে।</string>
     <string name="uninstall_required_message">%1$s এর ইনস্টল আবার চেষ্টা করতে, প্রথমে পুরানো সংস্করণ আনইনস্টল করতে হবে। চালিয়ে যান?</string>
     <string name="language_changed_message">ভাষা %1$s এ পরিবর্তিত হয়েছে।\n\nপরিবর্তন প্রয়োগ করতে এখনই অ্যাপ রিস্টার্ট করবেন?</string>
-</resources> 
+    
+    <!-- Language Selection -->
+    <string name="select_language">ভাষা নির্বাচন</string>
+    <string name="tap_to_change">পরিবর্তনের জন্য ট্যাপ করুন</string>
+    
+    <!-- Compact Mode -->
+    <string name="compact_mode">কমপ্যাক্ট মোড</string>
+    
+    <!-- Reinstall Feature -->
+    <string name="reinstall">পুনরায় ইনস্টল</string>
+    <string name="reinstall_started">পুনরায় ইনস্টল শুরু</string>
+    <string name="reinstall_completed">পুনরায় ইনস্টল সম্পন্ন</string>
+    <string name="reinstall_failed">পুনরায় ইনস্টল ব্যর্থ</string>
+    
+    <!-- Read More/Show Less -->
+    <string name="read_more">আরো পড়ুন</string>
+    <string name="show_less">কম দেখান</string>
+    
+    <!-- Additional Installation Messages -->
+    <string name="app_not_installed_proceeding">অ্যাপ ইনস্টল নেই, ডাউনলোড চালিয়ে যাচ্ছে</string>
+    <string name="installation_cancelled_by_user">ব্যবহারকারী দ্বারা ইনস্টল বাতিল</string>
+    <string name="apps_updated">অ্যাপ আপডেট</string>
+    <string name="error_applying_language">ভাষা প্রয়োগে ত্রুটি</string>
+    
+    <!-- Reinstall Confirmation Dialog -->
+    <string name="reinstall_confirmation_title">পুনরায় ইনস্টল নিশ্চিত করুন</string>
+    <string name="reinstall_confirmation_message">আপনি কি নিশ্চিত যে %1$s পুনরায় ইনস্টল করতে চান? এটি বর্তমান সংস্করণ আনইনস্টল করে সর্বশেষ সংস্করণ ইনস্টল করবে।</string>
+    
+    <!-- Auto-install and Background Download -->
+    <string name="download_completed_ready_to_install">ডাউনলোড সম্পন্ন এবং ইনস্টলের জন্য প্রস্তুত</string>
+    <string name="auto_install_enabled">স্বয়ংক্রিয় ইনস্টল সক্রিয়</string>
+    <string name="auto_install_disabled">স্বয়ংক্রিয় ইনস্টল নিষ্ক্রিয়</string>
+    <string name="pending_downloads_found">অপেক্ষমাণ ডাউনলোড পাওয়া গেছে</string>
+    <string name="background_download_completed">ব্যাকগ্রাউন্ড ডাউনলোড সম্পন্ন</string>
+    
+    <!-- Concurrent Downloads Dialog -->
+    <string name="downloads_complete_title">ডাউনলোড সম্পন্ন</string>
+    <string name="downloads_complete_summary">%2$d এর মধ্যে %1$d ডাউনলোড সফলভাবে সম্পন্ন</string>
+    <string name="successfully_downloaded">সফলভাবে ডাউনলোড</string>
+    <string name="failed_downloads">ব্যর্থ ডাউনলোড</string>
+    <string name="install_all_button">সব ইনস্টল</string>
+    <string name="install_button">ইনস্টল</string>
+    <string name="close_button">বন্ধ</string>
+    <string name="installing_multiple_apps">%1$d অ্যাপ ইনস্টল হচ্ছে</string>
+    <string name="installing_single_app">%1$s ইনস্টল হচ্ছে</string>
+    <string name="downloads_in_progress">ডাউনলোড চলমান</string>
+    <string name="concurrent_downloads_active">%1$d সমান্তরাল ডাউনলোড সক্রিয়</string>
+</resources>

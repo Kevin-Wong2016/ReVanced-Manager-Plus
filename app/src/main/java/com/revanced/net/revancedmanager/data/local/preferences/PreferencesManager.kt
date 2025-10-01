@@ -28,6 +28,7 @@ class PreferencesManager @Inject constructor(
         private const val CACHED_APP_LIST_KEY = "cached_app_list"
         private const val THEME_MODE_KEY = "theme_mode"
         private const val LANGUAGE_KEY = "language"
+        private const val COMPACT_MODE_KEY = "compact_mode"
         private const val FIRST_RUN_KEY = "first_run"
         private const val PENDING_INSTALL_PREFIX = "pending_install_"
         private const val AUTO_INSTALL_KEY = "auto_install_enabled"
@@ -102,15 +103,19 @@ class PreferencesManager @Inject constructor(
         android.util.Log.d("PreferencesManager", "💾 === SAVE APP CONFIG START ===")
         android.util.Log.d("PreferencesManager", "💾 Saving theme: ${config.themeMode}")
         android.util.Log.d("PreferencesManager", "💾 Saving language: ${config.language.displayName} (${config.language.code})")
+        android.util.Log.d("PreferencesManager", "💾 Saving compact mode: ${config.compactMode}")
         
         saveString(THEME_MODE_KEY, config.themeMode.name)
         saveString(LANGUAGE_KEY, config.language.code)
+        saveBoolean(COMPACT_MODE_KEY, config.compactMode)
         
         // Verify what was actually saved
         val savedTheme = getString(THEME_MODE_KEY, "NOT_FOUND")
         val savedLanguage = getString(LANGUAGE_KEY, "NOT_FOUND")
+        val savedCompactMode = getBoolean(COMPACT_MODE_KEY, true)
         android.util.Log.d("PreferencesManager", "💾 Verified saved theme: '$savedTheme'")
         android.util.Log.d("PreferencesManager", "💾 Verified saved language: '$savedLanguage'")
+        android.util.Log.d("PreferencesManager", "💾 Verified saved compact mode: '$savedCompactMode'")
         android.util.Log.d("PreferencesManager", "💾 === SAVE APP CONFIG END ===")
     }
     
@@ -186,8 +191,12 @@ class PreferencesManager @Inject constructor(
             Language.ENGLISH // Fallback to ENGLISH for any errors
         }
         
-        val config = AppConfig(themeMode, language)
-        android.util.Log.d("PreferencesManager", "🔧 Final config: theme=${config.themeMode}, language=${config.language.displayName} (${config.language.code})")
+        // Load compact mode with default value of true (matching AppConfig default)
+        val compactMode = getBoolean(COMPACT_MODE_KEY, true)
+        android.util.Log.d("PreferencesManager", "🔧 Loaded compact mode: $compactMode")
+        
+        val config = AppConfig(themeMode, language, compactMode)
+        android.util.Log.d("PreferencesManager", "🔧 Final config: theme=${config.themeMode}, language=${config.language.displayName} (${config.language.code}), compactMode=${config.compactMode}")
         android.util.Log.d("PreferencesManager", "🔧 === GET APP CONFIG END ===")
 
         return config
@@ -228,4 +237,4 @@ class PreferencesManager @Inject constructor(
     fun isAutoInstallEnabled(): Boolean {
         return getBoolean(AUTO_INSTALL_KEY, true) // Default to true for convenience
     }
-} 
+}

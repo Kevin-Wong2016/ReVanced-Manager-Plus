@@ -34,6 +34,13 @@
     <string name="installed_version">المثبت:  الإصدار  %1$s</string>
     <string name="latest_version">الأحدث:  الإصدار  %1$s</string>
     <string name="downloading_progress">جاري التحميل %1$d%%</string>
+    <string name="compact_mode">الوضع المضغوط</string>
+    <string name="read_more">قراءة المزيد</string>
+    <string name="show_less">إظهار أقل</string>
+    <string name="reinstall">إعادة التثبيت</string>
+    <string name="reinstall_started">بدأت إعادة التثبيت</string>
+    <string name="reinstall_completed">اكتملت إعادة التثبيت بنجاح</string>
+    <string name="reinstall_failed">فشلت إعادة التثبيت</string>
     
     <!-- Toast Messages -->
     <string name="download_starting">بدء التحميل...</string>
@@ -68,11 +75,13 @@
     <string name="installation_failed_title">فشل التثبيت</string>
     <string name="uninstall_required_title">مطلوب إلغاء التثبيت</string>
     <string name="language_changed_title">تم تغيير اللغة</string>
+    <string name="reinstall_confirmation_title">إعادة تثبيت التطبيق</string>
     
     <!-- Dialog Messages -->
     <string name="installation_failed_retry_message">فشل التثبيت:  %1$s\n\nهل تريد إعادة المحاولة؟ سيتم إلغاء تثبيت الإصدار القديم أولاً إذا كان موجوداً.</string>
     <string name="uninstall_required_message">لإعادة محاولة تثبيت %1$s، يجب إلغاء تثبيت الإصدار القديم أولاً. المتابعة؟</string>
     <string name="language_changed_message">تم تغيير اللغة إلى %1$s.\n\nإعادة تشغيل التطبيق الآن لتطبيق التغييرات؟</string>
+    <string name="reinstall_confirmation_message">سيؤدي هذا إلى إلغاء تثبيت الإصدار الحالي من %1$s وتحميل وتثبيت أحدث إصدار.\n\nهل تريد المتابعة؟</string>
     
     <!-- Auto-install and Background Download -->
     <string name="download_completed_ready_to_install">اكتمل تحميل %1$s وجاهز للتثبيت</string>

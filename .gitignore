@@ -16,3 +16,4 @@ local.properties
 /apk/
 revanced-keystore.jks
 *.sample.txt
+.kotlin

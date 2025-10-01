@@ -5,6 +5,7 @@
     <string name="settings">Settings</string>
     <string name="theme">Theme</string>
     <string name="language">Language</string>
+    <string name="compact_mode">Compact UI</string>
     <string name="theme_light">Light</string>
     <string name="theme_dark">Dark</string>
     <string name="theme_system">System</string>
@@ -27,6 +28,10 @@
     <string name="update">Update</string>
     <string name="open">Open</string>
     <string name="uninstall">Uninstall</string>
+    <string name="reinstall">Re-install</string>
+    <string name="reinstall_started">Reinstallation started</string>
+    <string name="reinstall_completed">Reinstallation completed successfully</string>
+    <string name="reinstall_failed">Reinstallation failed</string>
     <string name="downloading">Downloading</string>
     <string name="installing">Installing</string>
     <string name="uninstalling">Uninstalling</string>
@@ -34,6 +39,8 @@
     <string name="installed_version">Installed: v%1$s</string>
     <string name="latest_version">Latest: v%1$s</string>
     <string name="downloading_progress">Downloading %1$d%%</string>
+    <string name="read_more">Read more</string>
+    <string name="show_less">Show less</string>
     
     <!-- Toast Messages -->
     <string name="download_starting">Starting download...</string>
@@ -68,11 +75,13 @@
     <string name="installation_failed_title">Installation Failed</string>
     <string name="uninstall_required_title">Uninstall Required</string>
     <string name="language_changed_title">Language Changed</string>
+    <string name="reinstall_confirmation_title">Reinstall Application</string>
     
     <!-- Dialog Messages -->
     <string name="installation_failed_retry_message">Installation failed: %1$s\n\nDo you want to retry? This will uninstall the old version first if it exists.</string>
     <string name="uninstall_required_message">To retry installation of %1$s, the old version needs to be uninstalled first. Continue?</string>
     <string name="language_changed_message">Language has been changed to %1$s.\n\nRestart the app now to apply the changes?</string>
+    <string name="reinstall_confirmation_message">This will uninstall the current version of %1$s and download and install the latest version.\n\nDo you want to continue?</string>
     
     <!-- Auto-install and Background Download -->
     <string name="download_completed_ready_to_install">%1$s download completed and ready to install</string>
