@@ -1,4 +1,4 @@
-# RV Manager Plus 3.0 🚀
+# ReVanced Manager Plus 3.0 🚀
 
 *__Disclaimer:__ This project is an independent application inspired by the classic Vanced Manager concept. It is not affiliated with, endorsed by, or connected to any official ReVanced projects or trademark owners. This is a community-driven tool designed for better app management, installation, and updates.*
 
@@ -21,9 +21,9 @@
 
 ---
 
-## 🌟 Introducing RV Manager Plus 3.0
+## 🌟 Introducing ReVanced Manager Plus 3.0
 
-A completely redesigned Android application for managing modded applications with modern architecture, enhanced user experience, and professional-grade features. Built from the ground up using cutting-edge Android development practices.
+A completely redesigned Android application for managing apps provided by Vanced.to with modern architecture, enhanced user experience, and professional-grade features. Built from the ground up using cutting-edge Android development practices.
 
 ![Main Screen](screenshots/main_screen.jpg)
 
@@ -303,7 +303,7 @@ cd rv-manager
 - ✅ Improved error handling and user feedback
 
 ### **Version 2.x (Previous)**
-- ❌ Known issues with downloads and installations
+- ❌ Issues with downloads and installations
 - ❌ Limited language support
 - ❌ UI/UX problems
 - ❌ Background operation failures
@@ -345,3 +345,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **RV Manager Plus 3.0** - The next generation of app management tools. Experience the difference that professional software architecture and user-centered design can make.
 
 *Built with ❤️ by the community, for the community.*
+
